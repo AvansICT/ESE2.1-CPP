@@ -23,6 +23,8 @@ int main()
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
     std::print("Hello, World! C++23\n");    // C++23 feature
     LogCxxStandard();
+    LogOperatingSystem();
+    LogCompiler();
     LOG_DEBUG;
 
     int sum = globalAdd(5, 6);  // global function

@@ -35,9 +35,10 @@ void LogCompiler(void)
 
 void LogCxxStandard(void)
 {
-	std::cout << "C++ standard:";
-#if __cplusplus >= 202400L
-	std::cout << "post C++23";
+	std::cout << "C++ standard: ";
+
+#if __cplusplus > 202302L
+	std::cout << "C++26 or later";
 #elif __cplusplus == 202302L
 	std::cout << "C++23";
 #elif __cplusplus == 202002L
@@ -48,6 +49,8 @@ void LogCxxStandard(void)
 	std::cout << "C++14";
 #elif __cplusplus == 201103L
 	std::cout << "C++11";
+#elif __cplusplus == 199711L
+	std::cout << "C++98/C++03";
 #else
 	std::cout << "pre C++11";
 #endif
