@@ -175,6 +175,9 @@
 /Collaboration/groep8/Release
 
 ## Workshop 1
+/Workshop 1/Workshop/.vs
+/Workshop 1/Workshop/HelloWorld/x64/
+/Workshop 1/Workshop/HelloWorld/x64/Debug/
 /Workshop 1/Helloworld/.vs
 /Workshop 1/Helloworld/Debug
 /Workshop 1/Helloworld/Release
