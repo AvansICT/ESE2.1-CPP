@@ -176,15 +176,14 @@
 
 ## Workshop 1
 /Workshop 1/Workshop/.vs
-/Workshop 1/Workshop/HelloWorld/x64/
-/Workshop 1/Workshop/HelloWorld/x64/Debug/
-/Workshop 1/Helloworld/.vs
-/Workshop 1/Helloworld/Debug
-/Workshop 1/Helloworld/Release
-/Workshop 1/Helloworld/x64
-/Workshop 1/Helloworld/Helloworld/x64
-/Workshop 1/Helloworld/Helloworld/Debug
-/Workshop 1/Helloworld/Helloworld/Release
+
+/Workshop 1/Workshop/.vs
+/Workshop 1/Workshop/Debug
+/Workshop 1/Workshop/Release
+/Workshop 1/Workshop/x64
+/Workshop 1/Workshop/HelloWorld/Debug
+/Workshop 1/Workshop/HelloWorld/Release
+/Workshop 1/Workshop/HelloWorld/x64
 /Workshop 1/Opdracht/.vs
 /Workshop 1/Opdracht/Debug
 /Workshop 1/Opdracht/Release
@@ -390,3 +389,4 @@
 /Workshop 8/Workshop/msunittest/Release
 /Workshop 8/Workshop/msunittest/x64
 /Workshop 8/Workshop/msunittest/msunittest
+
