@@ -42,7 +42,7 @@ sudo apt install make
 sudo apt install unzip
 
 5. Download the zip file from github
-wget https://github.com/AvansICT/TI2.1-CPP/archive/refs/heads/main.zip
+wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
 
 6. Unzip the file
 unzip main.zip
@@ -50,14 +50,14 @@ unzip main.zip
 7. Download the GoogleTest - Google Testing and Mocking Framework
 wget https://github.com/google/googletest/archive/refs/tags/v1.17.0.zip
 8. Unzip the GoogleTest to the folder Workshop 8
-unzip v1.17.0.zip -d TI2.1-CPP-main/Workshop\ 8/
+unzip v1.17.0.zip -d ESE2.1-CPP-main/Workshop\ 8/
 
 10. Check if the archive is unzipped correctly
 Check if the file googletest-1.17.0/googletest/include/gtest/gtest.h exists
 (the include directories are hardcoded in CMakeLists.txt)
 
 11. navigate to the unzipped folder
-cd TI2.1-CPP-main/Workshop\ 8/Workshop/gunittest/
+cd ESE2.1-CPP-main/Workshop\ 8/Workshop/gunittest/
 
 12. Create a build folder and navigate to it
 mkdir build

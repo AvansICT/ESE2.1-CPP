@@ -14,13 +14,13 @@ sudo apt install make
 sudo apt install unzip
 
 5. Download the zip file from github
-wget https://github.com/AvansICT/TI2.1-CPP/archive/refs/heads/main.zip
+wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
 
 6. Unzip the file
 unzip main.zip
 
 7. navigate to the unzipped folder
-cd TI2.1-CPP-main/Workshop\ 7/Workshop/tcpserver/
+cd ESE2.1-CPP-main/Workshop\ 7/Workshop/tcpserver/
 
 8. Create a build folder and navigate to it
 mkdir build

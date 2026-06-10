@@ -1,4 +1,4 @@
-Linux build steps for myApp
+Linux build steps
 
 1. Open terminal
 
@@ -20,7 +20,7 @@ wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
 unzip main.zip
 
 7. navigate to the unzipped folder
-cd ESE2.1-CPP-main/Workshop\ 7/Workshop/udpclient/
+cd ESE2.1-CPP-main/Workshop\ 1/Workshop/HelloWorld/
 
 8. Create a build folder and navigate to it
 mkdir build
@@ -37,4 +37,4 @@ cmake ..
 make
 
 13. Run the program
-./udpclient
+./myApp

@@ -36,7 +36,7 @@ sudo apt install make
 sudo apt install unzip
 
 5. Download the zip file from github
-wget https://github.com/AvansICT/TI2.1-CPP/archive/refs/heads/main.zip
+wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
 
 6. Unzip the file
 unzip main.zip
@@ -45,14 +45,14 @@ unzip main.zip
 wget https://github.com/nlohmann/json/archive/refs/tags/v3.12.0.zip
 
 8. Unzip the nlohmann json library to the folder Workshop 7
-unzip v3.12.0.zip -d TI2.1-CPP-main/Workshop\ 7/
+unzip v3.12.0.zip -d ESE2.1-CPP-main/Workshop\ 7/
 
 10. Check if the archive is unzipped correctly
 Check if the file json-3.12.0/include/nlohmann/json.hpp exists
 (the include directories are hardcoded in CMakeLists.txt)
 
 11. navigate to the unzipped folder
-cd TI2.1-CPP-main/Workshop\ 7/Workshop/jsonApp/
+cd ESE2.1-CPP-main/Workshop\ 7/Workshop/jsonApp/
 
 12. Create a build folder, copy json example file and navigate to it
 mkdir build
