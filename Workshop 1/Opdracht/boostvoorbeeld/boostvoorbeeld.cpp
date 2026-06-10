@@ -11,6 +11,18 @@ namespace bg = boost::geometry;
 
 #define NR_OF_TURNS 5
 
+
+// Je kunt std::cout kleuren met ANSI escape codes, dit werkt in de meeste terminals. Hier zijn enkele voorbeelden van kleuren:
+const std::string RED = "\033[31m";
+const std::string GREEN = "\033[32m";
+const std::string YELLOW = "\033[33m";
+const std::string BLUE = "\033[34m";
+const std::string MAGENTA = "\033[35m";
+const std::string CYAN = "\033[36m";
+const std::string WHITE = "\033[37m";
+// En hier is de code om de kleur terug te zetten naar normaal
+const std::string RESET = "\033[0m";
+
 static void boost_example_with_units(void)
 {
     std::cout << "Boost example with units" << std::endl;
@@ -64,14 +76,14 @@ static void boost_example_with_random(void)
     {
         int dice1 = dist(rng);
         int dice2 = dist(rng);
-
+        // Even wat kleur in de output, gewoon omdat het kan en het er leuker uitziet
         std::cout << "Worp " << (i + 1)
-            << ": "
-            << dice1
-            << " + "
-            << dice2
-            << " = "
-            << (dice1 + dice2)
+            << ": " << RED
+            << dice1 << MAGENTA
+            << " + " << GREEN
+            << dice2 << CYAN
+            << " = " << BLUE
+            << (dice1 + dice2) << RESET
             << std::endl;
     }
 }
@@ -85,14 +97,13 @@ static void boost_example_with_geometry(void)
 
     double distance = bg::distance(p1, p2);
 
-    std::cout << "Distance: " << distance << std::endl; // Stelling van Pythagoras
-
+    std::cout << "Distance:" << distance << std::endl; // Stelling van Pythagoras
 }
 
 int main() 
 {
     std::cout << "Using boost version: " << BOOST_VERSION << "(" << BOOST_LIB_VERSION << ")" << std::endl;
-    std::cout << __DATE__ << " " << __TIME__ << std::endl;
+    std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
 
     boost_example_with_units();
 
