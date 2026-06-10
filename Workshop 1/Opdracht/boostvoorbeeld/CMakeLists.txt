@@ -19,7 +19,7 @@ add_executable(BoostVoorbeeld
 )
 
 # Add include directory for headers
-target_include_directories(BoostVoorbeeld PRIVATE ../../../Lib ${Boost_INCLUDE_DIRS)
+target_include_directories(BoostVoorbeeld PRIVATE ../../../Lib ${Boost_INCLUDE_DIRS})
 
 # Explicitly link stdc++
-target_link_libraries(BoostVoorbeeld PRIVATE stdc++ ${Boost_LIBRARIES)
+target_link_libraries(BoostVoorbeeld PRIVATE stdc++ ${Boost_LIBRARIES})

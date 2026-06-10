@@ -21,9 +21,9 @@ tar -xvzf boost_1_91_0.tar.gz
 5c. navigate to it
 cd boost_1_91_0
 5d. run Bootstrap
-./bootstrap.sh
+sudo ./bootstrap.sh
 5e. build and install
-./b2 install --prefix=/usr/local
+sudo ./b2 install --prefix=/usr/local
 
 6. Download the zip file from github
 wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
