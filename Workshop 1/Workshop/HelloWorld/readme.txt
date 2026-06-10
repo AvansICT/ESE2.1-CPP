@@ -37,4 +37,4 @@ cmake ..
 make
 
 13. Run the program
-./myApp
+./HelloWorld
