@@ -2,7 +2,15 @@
 //
 
 #include <iostream>
-#include <print>    //C++23
+// GCC versie check voor C++23 std::print ondersteuning
+#if defined(__GNUC__) && (__GNUC__ < 13)
+#define NO_STD_PRINT
+#endif
+
+#ifndef NO_STD_PRINT
+#include <print>
+#endif
+
 #include "log.hpp"
 #include "rekenen.hpp"
 
@@ -21,7 +29,12 @@ int main()
 {
     std::cout << "Hello World!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
+
+#ifdef NO_STD_PRINT
+    std::cout << "std::print not supported on this GCC version\n";
+#else
     std::print("Hello, World! C++23\n");    // C++23 feature
+#endif
     LogCxxStandard();
     LogOperatingSystem();
     LogCompiler();
