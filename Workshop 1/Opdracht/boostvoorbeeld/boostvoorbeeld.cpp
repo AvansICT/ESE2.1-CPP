@@ -4,6 +4,7 @@
 #include <boost/units/quantity.hpp>
 #include <boost/random.hpp>
 #include <boost/geometry.hpp>
+#include "log.hpp"
 
 namespace si = boost::units::si;
 using namespace boost::units;
@@ -102,6 +103,10 @@ static void boost_example_with_geometry(void)
 
 int main() 
 {
+    LogCxxStandard();
+    LogOperatingSystem();
+    LogCompiler();
+
     std::cout << "Using boost version: " << BOOST_VERSION << "(" << BOOST_LIB_VERSION << ")" << std::endl;
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
 
