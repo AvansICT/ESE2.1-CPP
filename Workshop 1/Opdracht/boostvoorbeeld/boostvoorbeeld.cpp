@@ -2,14 +2,18 @@
 #include <boost/units/systems/si.hpp>
 #include <boost/units/io.hpp>
 #include <boost/units/quantity.hpp>
+#include <boost/random.hpp>
+#include <boost/geometry.hpp>
 
 namespace si = boost::units::si;
 using namespace boost::units;
+namespace bg = boost::geometry;
 
-int main() 
+#define NR_OF_TURNS 5
+
+static void boost_example_with_units(void)
 {
-    std::cout << "Using boost version: " << BOOST_VERSION << std::endl;
-    std::cout << __DATE__ << " " << __TIME__ << std::endl;
+    std::cout << "Boost example with units" << std::endl;
     // Define a typedef for a quantity of length using SI units
     typedef quantity<si::length> Length;
     typedef quantity<si::mass> Mass;
@@ -25,7 +29,7 @@ int main()
     Time time(3.0 * si::seconds);
     Acceleration acc = (2.0 * si::meters_per_second_squared);
     Velocity v = (3.0 * si::meters_per_second);
-    
+
     // Berekeningen met eenheden
     Velocity velocity = length / time;
     Force force = mass * acc;
@@ -39,5 +43,61 @@ int main()
     std::cout << "Force: " << force << std::endl;
     std::cout << "Momentum: " << momentum << std::endl;
 
+}
+
+static void boost_example_with_random(void)
+{
+    std::cout << "Boost example with random number generation" << std::endl;
+    boost::random::mt19937 rng;
+    boost::random::uniform_int_distribution<> dist(1, 6);
+
+    // 1 dice
+    for (int cnt = 0; cnt < NR_OF_TURNS; ++cnt)
+    {
+        std::cout << "Worp " << (cnt + 1)
+            << ": "
+            << dist(rng)
+            << std::endl;
+    }
+
+    for (int i = 0; i < NR_OF_TURNS; ++i)
+    {
+        int dice1 = dist(rng);
+        int dice2 = dist(rng);
+
+        std::cout << "Worp " << (i + 1)
+            << ": "
+            << dice1
+            << " + "
+            << dice2
+            << " = "
+            << (dice1 + dice2)
+            << std::endl;
+    }
+}
+
+static void boost_example_with_geometry(void)
+{
+    std::cout << "Boost geometry example" << std::endl;
+    //https://en.wikipedia.org/wiki/Cartesian_coordinate_system
+    bg::model::point<double, 2, bg::cs::cartesian> p1(0.0, 0.0);
+    bg::model::point<double, 2, bg::cs::cartesian> p2(3.0, 4.0);
+
+    double distance = bg::distance(p1, p2);
+
+    std::cout << "Distance: " << distance << std::endl; // Stelling van Pythagoras
+
+}
+
+int main() 
+{
+    std::cout << "Using boost version: " << BOOST_VERSION << "(" << BOOST_LIB_VERSION << ")" << std::endl;
+    std::cout << __DATE__ << " " << __TIME__ << std::endl;
+
+    boost_example_with_units();
+
+    boost_example_with_random();
+
+    boost_example_with_geometry();
     return 0;
 }
