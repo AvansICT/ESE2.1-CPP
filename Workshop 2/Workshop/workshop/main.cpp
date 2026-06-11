@@ -116,6 +116,8 @@ void staticArrayDemo()
 #if defined(STACKOVERFLOW_RECURSIVE)
 void testRecursiveStackOverflow(void)
 {
+    volatile int x[1024];
+    (void)x;
     testRecursiveStackOverflow();    // infinite recursion force stack overflow
 }
 #elif defined(STACKOVERFLOW_STACKSIZE)
