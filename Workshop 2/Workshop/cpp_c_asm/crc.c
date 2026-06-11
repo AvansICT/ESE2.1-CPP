@@ -1,11 +1,20 @@
-/* CRC calculations in C 
+/* CRC calculations in C
  * https://en.wikipedia.org/wiki/Cyclic_redundancy_check
- * Based on https://web.archive.org/web/20190108202303/www.hackersdelight.org/hdcodetxt/crc.c.txt 
+ * Based on https://web.archive.org/web/20190108202303/www.hackersdelight.org/hdcodetxt/crc.c.txt
  *
  */
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef _MSC_FULL_VER
 #pragma warning (disable : 4146) // disable warning about unary minus on unsigned type
+#endif
+
+#if defined(_MSC_VER)
+#define FUNC_NAME __FUNCTION__
+#else
+#define FUNC_NAME __func__
+#endif
+
 
 #define BUFFER_SIZE  256
 
@@ -22,13 +31,13 @@ void testcrc(void)
         return;
     }
     else
-    { 
+    {
         int crc;
         for (int i = 0; i < BUFFER_SIZE; i++)
         {
             buffer[i] = (unsigned char)(i & 0xFF); // fill buffer with some data
         };
-        printf("%s input buffer:\n", __FUNCTION__);
+        printf("%s input buffer:\n", FUNC_NAME);
         logBuffer(buffer, BUFFER_SIZE);
 
         crc = crc32b(buffer, BUFFER_SIZE);

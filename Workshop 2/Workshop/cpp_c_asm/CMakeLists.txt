@@ -7,6 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Require C11
 set(CMAKE_C_STANDARD 11)
 
+# FORCE C compiler for this file
+set_source_files_properties(crc.c PROPERTIES LANGUAGE C)
+
 # Add the executable
 add_executable(cpp_c_asm_x64
     main.cpp
