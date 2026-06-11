@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 
 # FORCE C compiler for this file
-set_source_files_properties(crc.c PROPERTIES LANGUAGE C)
+set_source_files_properties(../../../Lib/clog.c crc.c PROPERTIES LANGUAGE C)
 
 # Add the executable
 add_executable(cpp_c_asm_x64
@@ -16,6 +16,8 @@ add_executable(cpp_c_asm_x64
     swap.cpp
     crc.c
     bitdemo.cpp
+    ../../../Lib/log.cpp
+    ../../../Lib/clog.c
     calcx64.S
 )
 
@@ -38,6 +40,8 @@ add_executable(cpp_c_asm_x86
     swap.cpp
     crc.c
     bitdemo.cpp
+    ../../../Lib/log.cpp
+    ../../../Lib/clog.c
     calcx86.S
 )
 

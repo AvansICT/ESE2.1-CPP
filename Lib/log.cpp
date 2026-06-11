@@ -22,75 +22,94 @@ static bool IsWSL()
 
 void LogTargetOperatingSystem(void)
 {
+	std::cout << "Target Operating System: ";
 #if defined(_WIN32) && defined(_WIN64)
-	std::cout << "Running on Windows 64-bit" << std::endl;
+	std::cout << "Windows";
 #elif defined(_WIN32)
-	std::cout << "Running on Windows 32-bit" << std::endl;
+	std::cout << "Windows 32-bit" ;
 #elif defined(__APPLE__) || defined(__MACH__)
-	std::cout << "Running on macOS" << std::endl;
+	std::cout << "macOS";
 #elif defined(__linux__)
+	std::cout << "Linux ";
 	if (IsWSL())
 	{
-		std::cout << "Running on WSL (Windows Subsystem for Linux)" << std::endl;
-	}
-	else
-	{
-		std::cout << "Running on native Linux" << std::endl;
+		std::cout << "WSL (Windows Subsystem for Linux)";
 	}
 #elif defined(__unix__)
-	std::cout << "Running on Unix" << std::endl;
+	std::cout << "Unix";
 #elif defined(_POSIX_VERSION)
-	std::cout << "Running on POSIX-compliant OS" << std::endl;
+	std::cout << "POSIX-compliant OS";
 #else
-	std::cout << "Unknown OS" << std::endl;
+	std::cout << "Unknown OS";
 #endif
+	std::cout << std::endl;
 }
 
-void LogArchitecture(void)
+void LogTargetArchitecture(void)
+{
+	std::cout << "Target architecture: ";
+#if defined(_M_X64)
+	std::cout << "x64";
+#elif defined(_M_IX86)
+	std::cout << "x86";
+#elif defined(__x86_64__)
+	std::cout << "x64 (GCC)";
+#elif defined(__i386__)
+	std::cout << "H x86 (GCC)";
+#else
+#error Platform not supported
+#endif
+	std::cout << std::endl;
+}
+
+void LogRunTimeArchitecture(void)
 {
 	// sizeof(void*) geeft de grootte van een pointer (adres in geheugen) in bytes
 	// 32bit: 4 bytes
 	// 64bit: 8 bytes
-	std::cout << "Architecture: ";
+	std::cout << "Runtime architecture: ";
 	if (sizeof(void*) == 8)
 	{
-		std::cout << "detected: 64-bit" << std::endl;
+		std::cout << "64-bit";
 	}
 	else if (sizeof(void*) == 4)
 	{
-		std::cout << "detected: 32-bit" << std::endl;
+		std::cout << "32-bit";
 	}
 	else if (sizeof(void*) == 2)
 	{
-		std::cout << "detected: 16-bit" << std::endl;
+		std::cout << "16-bit";
 	}
 	else if (sizeof(void*) == 1)
 	{
-		std::cout << "detected: 8-bit" << std::endl;
+		std::cout << "8-bit";
 	}
 	else
 	{
 		std::cout << "Unknown, pointer size = "
-			<< sizeof(void*) << " bytes" << std::endl;
+			<< sizeof(void*) << " bytes";
 	}
+	std::cout << std::endl;
 }
 
 void LogTargetCompiler(void)
 {
+	std::cout << "Target compiler: ";
 #if defined(__clang__)
-	std::cout << "Compiled with Clang version: " << __clang_version__ << std::endl;
+	std::cout << "Clang version: " << __clang_version__;
 #elif defined(__GNUC__) || defined(__GNUG__)
-	std::cout << "Compiled with GCC version: " << __VERSION__ << " (" << __GNUC__ << "." << __GNUC_MINOR__ << "." << __GNUC_PATCHLEVEL__ << ")" << std::endl;
+	std::cout << "GCC version: " << __VERSION__ << " (" << __GNUC__ << "." << __GNUC_MINOR__ << "." << __GNUC_PATCHLEVEL__ << ")";
 #elif defined(_MSC_FULL_VER)
-	std::cout << "Compiled with MSVC version: " << _MSC_FULL_VER << std::endl;
+	std::cout << "MSVC version: " << _MSC_FULL_VER;
 #else
-	std::cout << "Unknown compiler" << std::endl;
+	std::cout << "Unknown compiler";
 #endif
+	std::cout << std::endl;
 }
 
 void LogTargetCxxStandard(void)
 {
-	std::cout << "C++ standard: ";
+	std::cout << "Target C++ standard: ";
 
 #if __cplusplus > 202302L
 	std::cout << "C++26 or later";
