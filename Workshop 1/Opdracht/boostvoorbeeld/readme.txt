@@ -22,7 +22,7 @@ tar -xvzf boost_1_91_0.tar.gz
 cd boost_1_91_0
 5d. run Bootstrap
 sudo ./bootstrap.sh
-5e. build and install
+5e. build and install (mocht je ergens anders installeren pas dan ook de CMakeLists.txt aan!)
 sudo ./b2 install --prefix=/usr/local
 
 6. Download the zip file from github
