@@ -15,7 +15,7 @@ void selectionSortParallel(vector<int>& A);
 void selectionSortSerial(vector<int>& A);
 void verify(vector<int>& A);
 
-int main() {
+int main(int argc, char* argv[]) {
 	std::cout << "OpenMPExample\n";
 	std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
 

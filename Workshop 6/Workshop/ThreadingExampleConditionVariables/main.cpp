@@ -25,7 +25,7 @@ void consumer() {
     std::cout << "Consumer consumed: " << data << "\n";
 }
 
-int main() {
+int main(int argc, char* argv[]) {
     std::cout << "ThreadingExampleConditionVariables\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
     std::thread t1(producer);

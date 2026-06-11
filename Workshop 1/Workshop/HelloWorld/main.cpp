@@ -25,7 +25,7 @@ int globalAdd(int x, int y) {
     return x + y;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
     std::cout << "Hello World!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime

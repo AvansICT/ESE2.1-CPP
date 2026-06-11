@@ -5,7 +5,7 @@
 #include <print>    //C++23
 #include "log.hpp"
 
-int main()
+int main(int argc, char* argv[])
 {
     std::print("Hello, Opdracht\n");    // C++23 feature
 

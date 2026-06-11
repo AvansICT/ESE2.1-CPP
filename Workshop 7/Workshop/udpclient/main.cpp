@@ -5,7 +5,7 @@
 
 #define PORT 8080
 #define IP_ADDRESS "127.0.0.1"  //localhost loopback address
-int main() {
+int main(int argc, char* argv[]) {
     std::cout << "UDP CLient!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
     LogOperatingSystem();

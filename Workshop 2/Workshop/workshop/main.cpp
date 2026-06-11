@@ -129,7 +129,7 @@ void testStackSizeStackOverflow(void)
 }
 #endif
 
-int main()
+int main(int argc, char* argv[])
 {
     std::cout << "Workshop 2!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime

@@ -6,7 +6,7 @@
 #define N1 12
 #define N2 4
 
-int main() {
+int main(int argc, char* argv[]) {
     // simple basic app used for unit tests
     std::cout << "myApp uses myMath!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime

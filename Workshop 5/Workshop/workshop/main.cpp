@@ -30,7 +30,7 @@ void updateScoreSilent(int points) {
 }
 
 
-int main() {
+int main(int argc, char* argv[]) {
     std::cout << "Workshop 5!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
     // Functiepointer kiezen: of console log, of stil

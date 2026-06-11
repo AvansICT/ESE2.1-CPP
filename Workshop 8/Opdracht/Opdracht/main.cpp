@@ -3,7 +3,7 @@
 #include <iostream>
 #include <print>    //C++23
 
-int main()
+int main(int argc, char* argv[])
 {
     std::print("Hello, Opdracht\n");    // C++23 feature
 

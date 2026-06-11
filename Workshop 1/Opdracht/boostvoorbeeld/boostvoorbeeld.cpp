@@ -101,7 +101,7 @@ static void boost_example_with_geometry(void)
     std::cout << "Distance:" << distance << std::endl; // Stelling van Pythagoras
 }
 
-int main() 
+int main(int argc, char* argv[])
 {
     LogCxxStandard();
     LogOperatingSystem();

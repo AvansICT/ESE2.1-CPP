@@ -7,7 +7,7 @@
 
 // Global function
 
-int main()
+int main(int argc, char* argv[])
 {
     std::cout << "Robot!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime

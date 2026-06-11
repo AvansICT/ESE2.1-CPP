@@ -48,7 +48,7 @@ void call_from_thread(int threadId, LockType lock) {
         localSemaphore.release();
 }
 
-int main() {
+int main(int argc, char* argv[]) {
     std::cout << "ThreadingExample C++20 version using std::counting_semaphore\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
 

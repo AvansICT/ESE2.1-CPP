@@ -22,7 +22,7 @@ std::string fetchDataFromFile(const std::string& recvdData) {
 	return "File_" + recvdData;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
 	std::cout << "AsyncExample!\n";
 	std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
 

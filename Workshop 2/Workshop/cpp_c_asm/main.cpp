@@ -14,7 +14,7 @@ extern "C" int addWithAsmX86(int a, int b);
 #define FIRSTNUM    5
 #define SECONDNUM   6
 
-int main()
+int main(int argc, char* argv[])
 {
 #if defined(_M_X64)      
     std::cout << "Hello CPP C ASM from x64!" << std::endl;
