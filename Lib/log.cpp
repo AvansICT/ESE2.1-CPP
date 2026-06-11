@@ -55,7 +55,7 @@ void LogTargetArchitecture(void)
 #elif defined(__x86_64__)
 	std::cout << "x64 (GCC)";
 #elif defined(__i386__)
-	std::cout << "H x86 (GCC)";
+	std::cout << "x86 (GCC)";
 #else
 #error Platform not supported
 #endif
