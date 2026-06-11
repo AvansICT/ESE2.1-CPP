@@ -1,5 +1,24 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 #include "log.hpp"
+
+#if defined(__linux__)
+static bool IsWSL()
+{
+	std::ifstream file("/proc/version");
+	std::string line;
+
+	if (file.is_open())
+	{
+		std::getline(file, line);
+		return line.find("Microsoft") != std::string::npos ||
+			line.find("WSL") != std::string::npos;
+	}
+
+	return false;
+}
+#endif
 
 void LogOperatingSystem(void)
 {
@@ -10,7 +29,14 @@ void LogOperatingSystem(void)
 #elif defined(__APPLE__) || defined(__MACH__)
 	std::cout << "Running on macOS" << std::endl;
 #elif defined(__linux__)
-	std::cout << "Running on Linux" << std::endl;
+	if (IsWSL())
+	{
+		std::cout << "Running on WSL (Windows Subsystem for Linux)\" << std::endl;
+	}
+	else
+	{
+		std::cout << "Running on native Linux" << std::endl;
+	}
 #elif defined(__unix__)
 	std::cout << "Running on Unix" << std::endl;
 #elif defined(_POSIX_VERSION)
