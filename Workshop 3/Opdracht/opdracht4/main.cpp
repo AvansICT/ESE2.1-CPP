@@ -27,7 +27,7 @@ public:
 
 // TODO: initialiseer static variabele
 
-int main(int argc, char* argv[]) {
+int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::print("Hello, Opdracht 4\n");    // C++23 feature
     Student s1(101);
     Student s2(102);

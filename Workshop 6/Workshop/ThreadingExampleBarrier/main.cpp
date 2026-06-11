@@ -14,7 +14,7 @@ void worker(int id, std::barrier<>& sync_point) {
     std::this_thread::sleep_for(std::chrono::milliseconds(50 * id)); // simulatie werk
 }
 
-int main(int argc, char* argv[]) {
+int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::cout << "ThreadingExampleBarrier\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
     const int num_threads = 3;

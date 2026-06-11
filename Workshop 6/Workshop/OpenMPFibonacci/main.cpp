@@ -37,7 +37,7 @@ long long fibonacciOpenMP(int n) {
     return x + y;
 }
 
-int main(int argc, char* argv[]) {
+int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::cout << "OpenMP Fibonacci!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
     LogOperatingSystem();

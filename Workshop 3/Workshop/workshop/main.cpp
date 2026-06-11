@@ -130,7 +130,7 @@ void demo7(void) {
 	std::cout << "Geheime waarde: " << secret << std::endl;
 }
 
-int main(int argc, char* argv[])
+int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
     std::cout << "Workshop 3!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime

@@ -39,7 +39,7 @@ void call_from_thread(int threadId, LockType lock) {
         localMutex.unlock();
 }
 
-int main(int argc, char* argv[]) {
+int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::cout << "ThreadingExample only use a mutex (or no locking at all) older compilers (C++11/14/17)  \n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
 

@@ -16,7 +16,7 @@ static void printSkills(const std::vector<std::string>& skills) {
     std::cout << std::endl;
 }
 
-int main(int argc, char* argv[])
+int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
     std::print("Hello, Opdracht\n");    // C++23 feature
 
