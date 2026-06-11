@@ -15,7 +15,7 @@
 #include "rekenen.hpp"
 
 using namespace std;
-using namespace rekenen;
+using namespace MijnRekenNamespace;
 
 #define FIRSTNUM    5
 #define SECONDNUM   6
@@ -40,16 +40,20 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     LogCompiler();
     LOG_DEBUG;
 
-    int sum = globalAdd(5, 6);  // global function
-    sum = rekenen::add(5, 6);   // namespace function
-    Rekenen r;                  // class constructor
-    sum = r.add(5, 6);          // class method
+    int sum = globalAdd(40, 2);  // global function
+    std::cout << "globalAdd: " << sum << std::endl;
+    sum = MijnRekenNamespace::NameSpaceAdd(40, 2);        // namespace function
+    std::cout << "NameSpaceAdd: " << sum << std::endl;
+    sum = NameSpaceAdd(40, 2);        // namespace function
+    std::cout << "NameSpaceAdd: " << sum << std::endl;
 
-    if (sum > 10) {
-        std::cout << "Meer dan tien" << std::endl;
-    } else {
-        std::cout << "Minder dan tien" << std::endl;
-    }
+    MijnRekenNamespace::MijnRekenKlasse r;      // class constructor
+    MijnRekenKlasse r2;
+    sum = r.add(40, 2);          // class method
+    std::cout << "Class method sum: " << sum << std::endl;
+    sum += r2.add(40, 2);         // class method
+    std::cout << "Class method sum: " << sum << std::endl;
+
     return 0;
 }
 

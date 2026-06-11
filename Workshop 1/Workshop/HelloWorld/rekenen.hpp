@@ -1,16 +1,16 @@
-#ifndef _REKENEN_HPP_   
+#ifndef _REKENEN_HPP_
 #define _REKENEN_HPP_
 
-namespace rekenen
+namespace MijnRekenNamespace
 {
-    int add(int x, int y);
+    int NameSpaceAdd(int x, int y);
 
-    class Rekenen
+    class MijnRekenKlasse
     {
 
     public:
-        Rekenen(void);
-        ~Rekenen(void);
+        MijnRekenKlasse(void);
+        ~MijnRekenKlasse(void);
         int add(int x, int y);
 
     };
