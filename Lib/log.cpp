@@ -31,7 +31,7 @@ void LogOperatingSystem(void)
 #elif defined(__linux__)
 	if (IsWSL())
 	{
-		std::cout << "Running on WSL (Windows Subsystem for Linux)\" << std::endl;
+		std::cout << "Running on WSL (Windows Subsystem for Linux)" << std::endl;
 	}
 	else
 	{
