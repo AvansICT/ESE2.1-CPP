@@ -35,9 +35,9 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 #else
     std::print("Hello, World! C++23\n");    // C++23 feature
 #endif
-    LogCxxStandard();
-    LogOperatingSystem();
-    LogCompiler();
+    LogTargetCxxStandard();
+    LogTargetOperatingSystem();
+    LogTargetCompiler();
     LOG_DEBUG;
 
     int sum = globalAdd(40, 2);  // global function

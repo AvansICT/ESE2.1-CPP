@@ -9,7 +9,9 @@
 #define LOG_DEBUG
 #endif
 
-void LogOperatingSystem(void);
-void LogCompiler(void);
-void LogCxxStandard(void);
+void LogTargetOperatingSystem(void);
+void LogTargetArchitecture(void);
+void LogRunTimeArchitecture(void);
+void LogTargetCompiler(void);
+void LogTargetCxxStandard(void);
 #endif

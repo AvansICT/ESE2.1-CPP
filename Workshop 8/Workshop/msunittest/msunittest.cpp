@@ -12,12 +12,12 @@ namespace MSUnitTestMyApp
     TEST_CLASS(LibFunctionTests)
     {
     public:
-        TEST_METHOD(LogOperatingSystemTest)
+        TEST_METHOD(LogTargetOperatingSystemTest)
         {
             std::stringstream buffer;
             std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
 
-            LogOperatingSystem();
+            LogTargetOperatingSystem();
 
             std::cout.rdbuf(oldCout); // restore
 
@@ -40,12 +40,12 @@ namespace MSUnitTestMyApp
 #endif
         }
 
-        TEST_METHOD(LogCompilerTest)
+        TEST_METHOD(LogTargetCompilerTest)
         {
             std::stringstream buffer;
             std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
 
-            LogCompiler();
+            LogTargetCompiler();
 
             std::cout.rdbuf(oldCout); // restore
             std::string output = buffer.str();
@@ -61,12 +61,12 @@ namespace MSUnitTestMyApp
 #endif
         }
 
-        TEST_METHOD(LogCxxStandardTest)
+        TEST_METHOD(LogTargetCxxStandardTest)
         {
             std::stringstream buffer;
             std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
 
-            LogCxxStandard();
+            LogTargetCxxStandard();
 
             std::cout.rdbuf(oldCout); // restore
             std::string output = buffer.str();

@@ -10,9 +10,9 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     // simple basic app used for unit tests
     std::cout << "myApp uses myMath!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
-    LogOperatingSystem();
-    LogCompiler();
-    LogCxxStandard();
+    LogTargetOperatingSystem();
+    LogTargetCompiler();
+    LogTargetCxxStandard();
 	// use the functions from myapp
     std::cout << "add result:" << myMath::add(N1, N2) << std::endl;
     std::cout << "sub result:" << myMath::subtract(N1, N2) << std::endl;

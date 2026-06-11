@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="bitdemo.cpp" />
+    <ClCompile Include="swap.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="crc.c" />
+    <ClCompile Include="..\..\..\Lib\log.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lib\clog.c">
+      <Filter>Lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bitdemo.hpp" />
+    <ClInclude Include="swap.hpp" />
+    <ClInclude Include="crc.h" />
+    <ClInclude Include="..\..\..\Lib\log.hpp">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lib\clog.h">
+      <Filter>Lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="calcx64.asm" />
+    <MASM Include="calcx86.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{9066ef5b-9d3e-4478-923b-33e9bd5695c1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -10,8 +10,8 @@
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::cout << "UDP Server!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
-    LogOperatingSystem();
-    LogCompiler();
+    LogTargetOperatingSystem();
+    LogTargetCompiler();
 #ifdef _WIN32
     WSADATA wsaData;
     (void)WSAStartup(MAKEWORD(2, 2), &wsaData);

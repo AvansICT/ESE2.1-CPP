@@ -7,11 +7,11 @@ namespace GUnitTestMyApp
 {
     TEST(LibFunctionTests, DetectsOperatingSystemOutput)
     {
-        LogOperatingSystem(); // log to console
+        LogTargetOperatingSystem(); // log to console
         // Capture console output
         testing::internal::CaptureStdout();
 
-        LogOperatingSystem();
+        LogTargetOperatingSystem();
 
         std::string output = testing::internal::GetCapturedStdout();
 
@@ -34,11 +34,11 @@ namespace GUnitTestMyApp
 
     TEST(LibFunctionTests, DetectsCompilerOutput)
     {
-        LogCompiler(); // log to console
+        LogTargetCompiler(); // log to console
         // Capture stdout before calling the function
         testing::internal::CaptureStdout();
 
-        LogCompiler();
+        LogTargetCompiler();
 
         std::string output = testing::internal::GetCapturedStdout();
 
@@ -62,10 +62,10 @@ namespace GUnitTestMyApp
 
     TEST(LibFunctionTests, DetectsCxxVersionOutput)
     {
-        LogCxxStandard(); // log to console
+        LogTargetCxxStandard(); // log to console
         testing::internal::CaptureStdout();
 
-        LogCxxStandard();
+        LogTargetCxxStandard();
 
         std::string output = testing::internal::GetCapturedStdout();
 

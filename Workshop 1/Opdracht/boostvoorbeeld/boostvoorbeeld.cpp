@@ -103,9 +103,9 @@ static void boost_example_with_geometry(void)
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
-    LogCxxStandard();
-    LogOperatingSystem();
-    LogCompiler();
+    LogTargetCxxStandard();
+    LogTargetOperatingSystem();
+    LogTargetCompiler();
 
     std::cout << "Using boost version: " << BOOST_VERSION << "(" << BOOST_LIB_VERSION << ")" << std::endl;
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime

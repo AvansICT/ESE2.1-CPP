@@ -12,9 +12,9 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
 	std::cout << "myApp!\n";
 	std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
-	LogOperatingSystem();
-	LogCompiler();
-	LogCxxStandard();
+	LogTargetOperatingSystem();
+	LogTargetCompiler();
+	LogTargetCxxStandard();
 	LOG_DEBUG
 	// Some fun with random numbers
 	std::srand(static_cast<unsigned>(std::time(nullptr))); // init random

@@ -20,7 +20,7 @@ static bool IsWSL()
 }
 #endif
 
-void LogOperatingSystem(void)
+void LogTargetOperatingSystem(void)
 {
 #if defined(_WIN32) && defined(_WIN64)
 	std::cout << "Running on Windows 64-bit" << std::endl;
@@ -46,7 +46,36 @@ void LogOperatingSystem(void)
 #endif
 }
 
-void LogCompiler(void)
+void LogArchitecture(void)
+{
+	// sizeof(void*) geeft de grootte van een pointer (adres in geheugen) in bytes
+	// 32bit: 4 bytes
+	// 64bit: 8 bytes
+	std::cout << "Architecture: ";
+	if (sizeof(void*) == 8)
+	{
+		std::cout << "detected: 64-bit" << std::endl;
+	}
+	else if (sizeof(void*) == 4)
+	{
+		std::cout << "detected: 32-bit" << std::endl;
+	}
+	else if (sizeof(void*) == 2)
+	{
+		std::cout << "detected: 16-bit" << std::endl;
+	}
+	else if (sizeof(void*) == 1)
+	{
+		std::cout << "detected: 8-bit" << std::endl;
+	}
+	else
+	{
+		std::cout << "Unknown, pointer size = "
+			<< sizeof(void*) << " bytes" << std::endl;
+	}
+}
+
+void LogTargetCompiler(void)
 {
 #if defined(__clang__)
 	std::cout << "Compiled with Clang version: " << __clang_version__ << std::endl;
@@ -59,7 +88,7 @@ void LogCompiler(void)
 #endif
 }
 
-void LogCxxStandard(void)
+void LogTargetCxxStandard(void)
 {
 	std::cout << "C++ standard: ";
 

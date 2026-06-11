@@ -9,9 +9,9 @@ using json = nlohmann::json;
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::cout << "jsonApp!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
-    LogOperatingSystem();
-    LogCompiler();
-	LogCxxStandard();
+    LogTargetOperatingSystem();
+    LogTargetCompiler();
+	LogTargetCxxStandard();
 	std::cout << "nlohmann::json version: " << NLOHMANN_JSON_VERSION_MAJOR << "." << NLOHMANN_JSON_VERSION_MINOR << "." << NLOHMANN_JSON_VERSION_PATCH << std::endl;
 
     // JSON uit bestand inlezen

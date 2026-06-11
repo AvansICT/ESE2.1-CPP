@@ -8,9 +8,9 @@
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::cout << "reductie\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
-    LogOperatingSystem();
-    LogCompiler();
-    LogCxxStandard();
+    LogTargetOperatingSystem();
+    LogTargetCompiler();
+    LogTargetCxxStandard();
 
     ChronoTimer t1;
 	OmpTimer t2;

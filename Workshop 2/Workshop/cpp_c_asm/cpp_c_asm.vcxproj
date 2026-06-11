@@ -137,11 +137,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Lib\clog.h" />
+    <ClInclude Include="..\..\..\Lib\log.hpp" />
     <ClInclude Include="bitdemo.hpp" />
     <ClInclude Include="swap.hpp" />
     <ClInclude Include="crc.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Lib\clog.c" />
+    <ClCompile Include="..\..\..\Lib\log.cpp" />
     <ClCompile Include="bitdemo.cpp" />
     <ClCompile Include="swap.cpp" />
     <ClCompile Include="main.cpp" />

@@ -40,9 +40,9 @@ long long fibonacciOpenMP(int n) {
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
     std::cout << "OpenMP Fibonacci!\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
-    LogOperatingSystem();
-    LogCompiler();
-    LogCxxStandard();
+    LogTargetOperatingSystem();
+    LogTargetCompiler();
+    LogTargetCxxStandard();
 
 #if defined(_WIN32) || defined(_WIN64)
     WindowsTimer t1;

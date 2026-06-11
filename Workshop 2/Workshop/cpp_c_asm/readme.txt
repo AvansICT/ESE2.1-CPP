@@ -5,7 +5,7 @@ Linux build steps
 2. Install gcc and g++ compilers
 sudo apt install gcc
 sudo apt install g++
-2a. Extra for x86 build
+2a. Extra for x86 build (fixes fatal error: bits/c++config.h: No such file or directory)
 sudo apt install g++-multilib
 sudo apt install gcc-multilib
 
