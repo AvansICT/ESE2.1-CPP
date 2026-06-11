@@ -11,7 +11,7 @@ namespace avans
         unsigned int id;
         direction   dir;
         std::string name;
-        color       color;
+        color       robotcolor;
         uint32_t    ipaddr; // IPv4 address as 32-bit integer
     }RobotInfo;
 
