@@ -15,11 +15,11 @@ sudo apt install unzip
 
 5. Build boost:
 5a. Download the boost zip file
-wget https://archives.boost.io/release/1.91.0/source/boost_1_91_0.tar.gz
+wget https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.gz
 5b.extract the archive
-tar -xvzf boost_1_91_0.tar.gz
+tar -xvzf boost_1_92_0.tar.gz
 5c. navigate to it
-cd boost_1_91_0
+cd boost_1_92_0
 5d. run Bootstrap
 sudo ./bootstrap.sh
 5e. build and install (mocht je ergens anders installeren pas dan ook de CMakeLists.txt aan!)
