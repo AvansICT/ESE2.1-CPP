@@ -23,6 +23,12 @@ void demo1(void) {
     std::cout << s.i << " " << (s.b ? 1 : 0) << '\n'; // 43 1
     p->b = false;
     std::cout << s.i << " " << (s.b ? 1 : 0) << '\n'; // 43 0
+
+
+    (*p).i = 67; // (*p).i is equivalent to p->i
+    std::cout << s.i << " " << (s.b ? 1 : 0) << '\n'; // 67 0
+    (*p).b = true; // (*p).b is equivalent to p->b
+    std::cout << s.i << " " << (s.b ? 1 : 0) << '\n'; // 67 1
 }
 
 void changeCallByValue(int x) {
