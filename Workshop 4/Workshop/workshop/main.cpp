@@ -116,15 +116,23 @@ typedef int(*myFunctionpoiter)(int, int);
 
 // Prototype
 int addClassicFPInt(int x, int y);
+int addClassicFPIntLogging(int x, int y);
 int addIntWithClassicFP(int x, int y, myFunctionpoiter fp); //Vervangt: int addIntWithFP(int x, int y, int(*fp)(int, int));
 
 void demonstrateClassicFP() {
     std::cout << "resultaat: " << addIntWithClassicFP(1, 2, addClassicFPInt) << std::endl;
+    std::cout << "resultaat met logging: " << addIntWithClassicFP(1, 2, addClassicFPIntLogging) << std::endl;
 }
 
 int addClassicFPInt(int x, int y) {
     return x + y;
 }
+
+int addClassicFPIntLogging(int x, int y) {
+    std::cout << "Logging: " << x << " + " << y << " = " << (x + y) << std::endl;
+    return x + y;
+}
+
 
 int addIntWithClassicFP(int x, int y, myFunctionpoiter fp) {
     return fp(x, y);
