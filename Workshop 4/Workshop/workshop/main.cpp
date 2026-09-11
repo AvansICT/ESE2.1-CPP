@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
 #include "log.hpp"
 
 class InheritanceBase {
@@ -50,15 +52,20 @@ static void demonstrateMultipleInheritance(void) {
 class PolymorphismBase {
 public:
     virtual void greet() { std::cout << "Hello from PolymorphismBase\n"; }
+	void doNothing() {} // empty function
+	virtual void talk() = 0; // pure virtual function, making this class abstract
 };
 
 class PolymorphismDerived1 : public PolymorphismBase {
 public:
+    void doNothing() { std::cout << "Hello from PolymorphismBase\n"; };
+    void talk() override { std::cout << "Talking from PolymorphismDerived1\n"; }
 };
 
 class PolymorphismDerived2 : public PolymorphismBase {
 public:
     void greet() override { std::cout << "Hello from Derived override\n"; }
+    void talk() override { std::cout << "Talking from PolymorphismDerived1\n"; }
 };
 
 static void demonstratePolymorphism(void) {
@@ -70,8 +77,38 @@ static void demonstratePolymorphism(void) {
 }
 
 static void demonstrateLambda(void) {
-	auto add = [](int a, int b) { return a + b; };
-	std::cout << "Lambda add(2, 3): " << add(2, 3) << std::endl;
+    // Simpele lambda zoals jij al had
+    auto add = [](int a, int b) { return a + b; };
+    std::cout << "Lambda add(2, 3): " << add(2, 3) << std::endl;
+
+    // Vector met waarden
+    std::vector<int> values{ 1, 2, 3, 4, 5 };
+
+    // Lambda die een waarde verwerkt
+    auto printValue = [](int v) {
+        std::cout << "Value: " << v << std::endl;
+        };
+
+    // Loop + lambda
+    for (int v : values) {
+        printValue(v);
+    }
+
+	// korte lambda die een waarde verwerkt
+    std::for_each(values.begin(), values.end(),
+        [](int v) { std::cout << "for_each lambda " << v << '\n'; });
+
+
+    // Lambda die alle waarden optelt
+    auto sumAll = [](const std::vector<int>& vec) {
+        int total = 0;
+        for (int v : vec) {
+            total += v;
+        }
+        return total;
+        };
+
+    std::cout << "Sum of all values: " << sumAll(values) << std::endl;
 }
 
 // Classic Function pointer example
