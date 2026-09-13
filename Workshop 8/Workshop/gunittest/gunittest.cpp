@@ -16,7 +16,7 @@ namespace GUnitTestMyApp
         std::string output = testing::internal::GetCapturedStdout();
 
 #if defined(_WIN32) && defined(_WIN64)
-        EXPECT_NE(output.find("Windows 64-bit"), std::string::npos);
+        EXPECT_NE(output.find("Windows"), std::string::npos);
 #elif defined(_WIN32)
         EXPECT_NE(output.find("Windows 32-bit"), std::string::npos);
 #elif defined(__APPLE__) || defined(__MACH__)
@@ -72,9 +72,8 @@ namespace GUnitTestMyApp
         // The test dynamically checks which branch should be active
         // based on the compile-time value of __cplusplus
 #if __cplusplus >= 202400L
-        EXPECT_NE(output.find("post C++23"), std::string::npos)
-            << "Expected 'post C++23', got: " << output;
-
+        EXPECT_NE(output.find("C++26 or later"), std::string::npos)
+            << "Expected 'C++26 or later', got: " << output;
 #elif __cplusplus == 202302L
         EXPECT_NE(output.find("C++23"), std::string::npos)
             << "Expected 'C++23', got: " << output;

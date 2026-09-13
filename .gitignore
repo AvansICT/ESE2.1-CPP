@@ -364,7 +364,7 @@
 /Workshop 8/Workshop/workshop/Debug
 /Workshop 8/Workshop/workshop/Release
 ## ignore google test
-/Workshop 8/googletest-1.17.0
+/Workshop 8/googletest-1.18.0
 /Workshop 8/Opdracht/.vs
 /Workshop 8/Opdracht/x64
 /Workshop 8/Opdracht/Debug

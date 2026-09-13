@@ -10,16 +10,16 @@ add_executable(gunittest
     gunittest.cpp
     ../myApp/mymath.cpp
     ../../../Lib/log.cpp
-    ../../googletest-1.17.0/googletest/src/gtest.cc
-    ../../googletest-1.17.0/googletest/src/gtest_main.cc
-    ../../googletest-1.17.0/googletest/src/gtest-assertion-result.cc
-    ../../googletest-1.17.0/googletest/src/gtest-death-test.cc
-    ../../googletest-1.17.0/googletest/src/gtest-filepath.cc
-    ../../googletest-1.17.0/googletest/src/gtest-matchers.cc
-    ../../googletest-1.17.0/googletest/src/gtest-port.cc
-    ../../googletest-1.17.0/googletest/src/gtest-printers.cc
-    ../../googletest-1.17.0/googletest/src/gtest-test-part.cc
-    ../../googletest-1.17.0/googletest/src/gtest-typed-test.cc
+    ../../googletest-1.18.0/googletest/src/gtest.cc
+    ../../googletest-1.18.0/googletest/src/gtest_main.cc
+    ../../googletest-1.18.0/googletest/src/gtest-assertion-result.cc
+    ../../googletest-1.18.0/googletest/src/gtest-death-test.cc
+    ../../googletest-1.18.0/googletest/src/gtest-filepath.cc
+    ../../googletest-1.18.0/googletest/src/gtest-matchers.cc
+    ../../googletest-1.18.0/googletest/src/gtest-port.cc
+    ../../googletest-1.18.0/googletest/src/gtest-printers.cc
+    ../../googletest-1.18.0/googletest/src/gtest-test-part.cc
+    ../../googletest-1.18.0/googletest/src/gtest-typed-test.cc
 )
 
 # Add include directory for headers
@@ -27,8 +27,8 @@ target_include_directories(gunittest
     PRIVATE
     ../../../Lib
     ../myApp
-    ../../googletest-1.17.0/googletest
-    ../../googletest-1.17.0/googletest/include
+    ../../googletest-1.18.0/googletest
+    ../../googletest-1.18.0/googletest/include
 )
 
 # Explicitly link stdc++

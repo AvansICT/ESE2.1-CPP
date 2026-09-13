@@ -8,7 +8,7 @@ in the gunittest project for the included GoogleTest source files. And gtest-all
 was excluded from build.
 
 1. Download the GoogleTest - Google Testing and Mocking Framework
-from https://github.com/google/googletest/archive/refs/tags/v1.17.0.zip
+from https://github.com/google/googletest/archive/refs/tags/v1.18.0.zip
 
 2. Unzip GoogleTest to the folder Workshop 8
 The structure should be like this:
@@ -17,10 +17,10 @@ Workshop 8
 	   |-- gunittest
 			|-- CMakeLists.txt
 			|-- gunittest.cpp
-  |-- googletest-1.17.0
+  |-- googletest-1.18.0
 
 3. Check if the archive is unzipped correctly
-Check if the file /googletest-1.17.0/googletest/include/gtest/gtest.h exists
+Check if the file /googletest-1.18.0/googletest/include/gtest/gtest.h exists
 (the include directories are hardcoded in visual studio project file
  project properties -> C/C++ -> General -> Additional Include Directories)
 
@@ -48,12 +48,12 @@ wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
 unzip main.zip
 
 7. Download the GoogleTest - Google Testing and Mocking Framework
-wget https://github.com/google/googletest/archive/refs/tags/v1.17.0.zip
+wget https://github.com/google/googletest/archive/refs/tags/v1.18.0.zip
 8. Unzip the GoogleTest to the folder Workshop 8
 unzip v1.17.0.zip -d ESE2.1-CPP-main/Workshop\ 8/
 
 10. Check if the archive is unzipped correctly
-Check if the file googletest-1.17.0/googletest/include/gtest/gtest.h exists
+Check if the file googletest-1.18.0/googletest/include/gtest/gtest.h exists
 (the include directories are hardcoded in CMakeLists.txt)
 
 11. navigate to the unzipped folder

@@ -78,7 +78,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.17.0\googletest;..\..\googletest-1.17.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.18.0\googletest;..\..\googletest-1.18.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -96,7 +96,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.17.0\googletest;..\..\googletest-1.17.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.18.0\googletest;..\..\googletest-1.18.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -112,7 +112,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.17.0\googletest;..\..\googletest-1.17.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.18.0\googletest;..\..\googletest-1.18.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -130,7 +130,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.17.0\googletest;..\..\googletest-1.17.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\Lib;..\..\googletest-1.18.0\googletest;..\..\googletest-1.18.0\googletest\include;..\myApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -141,33 +141,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Lib\log.cpp" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-all.cc">
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-all.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-assertion-result.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-death-test.cc">
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-assertion-result.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-death-test.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-filepath.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-matchers.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-port.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-printers.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-test-part.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest-typed-test.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest.cc" />
-    <ClCompile Include="..\..\googletest-1.17.0\googletest\src\gtest_main.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-filepath.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-matchers.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-port.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-printers.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-test-part.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-typed-test.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest.cc" />
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest_main.cc" />
     <ClCompile Include="..\myApp\mymath.cpp" />
     <ClCompile Include="gunittest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Lib\log.hpp" />
-    <ClInclude Include="..\..\googletest-1.17.0\googletest\src\gtest-internal-inl.h" />
+    <ClInclude Include="..\..\googletest-1.18.0\googletest\src\gtest-internal-inl.h" />
     <ClInclude Include="..\myApp\mymath.hpp" />
   </ItemGroup>
   <ItemGroup>
