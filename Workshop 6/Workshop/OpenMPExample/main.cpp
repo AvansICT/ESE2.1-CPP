@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "omp.h"
+#include <omp.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
