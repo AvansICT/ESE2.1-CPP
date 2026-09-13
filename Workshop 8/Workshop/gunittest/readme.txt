@@ -50,7 +50,7 @@ unzip main.zip
 7. Download the GoogleTest - Google Testing and Mocking Framework
 wget https://github.com/google/googletest/archive/refs/tags/v1.18.0.zip
 8. Unzip the GoogleTest to the folder Workshop 8
-unzip v1.17.0.zip -d ESE2.1-CPP-main/Workshop\ 8/
+unzip v1.18.0.zip -d ESE2.1-CPP-main/Workshop\ 8/
 
 10. Check if the archive is unzipped correctly
 Check if the file googletest-1.18.0/googletest/include/gtest/gtest.h exists
