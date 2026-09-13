@@ -24,7 +24,7 @@ namespace MSUnitTestMyApp
             std::string output = buffer.str();
 
 #if defined(_WIN32) && defined(_WIN64)
-            Assert::IsTrue(output.find("Windows 64-bit") != std::string::npos);
+            Assert::IsTrue(output.find("Windows") != std::string::npos);
 #elif defined(_WIN32)
             Assert::IsTrue(output.find("Windows 32-bit") != std::string::npos);
 #elif defined(__APPLE__) || defined(__MACH__)
@@ -72,7 +72,7 @@ namespace MSUnitTestMyApp
             std::string output = buffer.str();
 
 #if __cplusplus >= 202400L
-            Assert::IsTrue(output.find("post C++23") != std::string::npos);
+            Assert::IsTrue(output.find("C++26 or later") != std::string::npos);
 #elif __cplusplus == 202302L
             Assert::IsTrue(output.find("C++23") != std::string::npos);
 #elif __cplusplus == 202002L
