@@ -25,4 +25,8 @@
       <Filter>myApp</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="readme.txt" />
+  </ItemGroup>
 </Project>
