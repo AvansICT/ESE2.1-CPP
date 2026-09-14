@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Boostunittest.cpp" />
+    <ClCompile Include="..\..\..\Lib\log.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\myApp\mymath.cpp">
+      <Filter>myApp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{40cbd4ab-731c-49e3-8d23-f79a94d086bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="myApp">
+      <UniqueIdentifier>{8ef90f14-5a2b-4ca5-aabc-cc93ae23b675}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Lib\log.hpp">
+      <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\myApp\mymath.hpp">
+      <Filter>myApp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
