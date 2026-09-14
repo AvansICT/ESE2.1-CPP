@@ -15,11 +15,17 @@ find_package(Boost REQUIRED)
 # Add the executable
 add_executable(Boostunittest
     boostunittest.cpp
+    ../myApp/mymath.cpp
     ../../../Lib/log.cpp
 )
 
 # Add include directory for headers
-target_include_directories(Boostunittest PRIVATE ../../../Lib ${Boost_INCLUDE_DIRS})
+target_include_directories(Boostunittest
+    PRIVATE
+    ../../../Lib
+    ../myApp
+    ${Boost_INCLUDE_DIRS}
+)
 
 # Explicitly link stdc++
 target_link_libraries(Boostunittest PRIVATE stdc++ ${Boost_LIBRARIES})
