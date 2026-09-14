@@ -11,6 +11,17 @@
 
 using namespace myMath;
 
+// Boost Test Framework does not show the output of std::cout by default when running tests.
+// if you want to see the output when running the tests, add the following command line 
+// argument to the test runner:
+// Refer to: https://www.boost.org/doc/libs/latest/libs/test/doc/html/boost_test/utf_reference/rt_param_reference/log_level.html
+//
+// Visual studio specific:
+// Project -> Properties -> Debugging -> Command Arguments -> --log_level=all 
+// 
+// Linux specific:
+// ./boostunittest --log_level=all
+
 namespace BoostTestMyApp
 {
     //
