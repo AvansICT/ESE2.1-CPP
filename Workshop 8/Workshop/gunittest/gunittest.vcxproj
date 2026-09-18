@@ -148,12 +148,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-assertion-result.cc" />
-    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-death-test.cc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-death-test.cc" />
     <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-filepath.cc" />
     <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-matchers.cc" />
     <ClCompile Include="..\..\googletest-1.18.0\googletest\src\gtest-port.cc" />
