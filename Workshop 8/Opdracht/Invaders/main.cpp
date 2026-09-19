@@ -1,5 +1,4 @@
 #include <iostream>
-#include <print>    //C++23
 #include <windows.h>
 #include <algorithm>
 #include <cmath>
@@ -936,7 +935,7 @@ private:
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
-    std::print("Invaders ({})\n", __FILE__);
+    std::cout << "Invaders (" << __FILE__ << ")\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
     LogTargetArchitecture();
     LogRunTimeArchitecture();

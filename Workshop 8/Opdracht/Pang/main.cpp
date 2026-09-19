@@ -1,4 +1,3 @@
-#include <print>    //C++23
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <cmath>
@@ -122,7 +121,7 @@ public:
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
-    std::print("SFML Pang ({})\n", __FILE__);
+    std::cout << "Pang(" << __FILE__ << ")\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
     LogTargetArchitecture();
     LogRunTimeArchitecture();

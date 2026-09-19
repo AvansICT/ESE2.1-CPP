@@ -1,19 +1,37 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.22)
+
 project(myApp LANGUAGES CXX)
 
 # Require C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Add the executable
-add_executable(Workshop
+# SFML (custom static build in /usr/local)
+set(SFML_DIR "/usr/local/lib/cmake/SFML")
+set(SFML_STATIC_LIBRARIES ON)
+
+# Find SFML
+find_package(SFML 3 REQUIRED COMPONENTS
+    Graphics
+    Window
+    System
+)
+
+# Add executable
+add_executable(Invaders
     main.cpp
-    robot.cpp
     ../../../Lib/log.cpp
 )
 
-# Add include directory for headers
-target_include_directories(Workshop PRIVATE ../../../Lib)
+# Add include directory for own headers
+target_include_directories(Invaders PRIVATE
+    ../../../Lib
+)
 
-# Explicitly link stdc++
-target_link_libraries(Workshop PRIVATE stdc++)
+# Link SFML
+target_link_libraries(Invaders PRIVATE
+    SFML::Graphics
+    SFML::Window
+    SFML::System
+)

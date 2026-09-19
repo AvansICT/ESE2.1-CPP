@@ -30,7 +30,26 @@ Windows build steps
 10. Install Release version of SFML in C:\SFML
     cmake --install . --config Release --prefix C:\SFML\Release
 
-    Ready for usage with Visual Studio!
+Ready for usage with Visual Studio!
+
+When starting a new project, make sure to add the include and lib directories of SFML to your project settings.
+
+1.  Make sure to add the include and lib directories of SFML to your project settings.
+    Release build:
+      Project settings -> C/C++ -> General -> Additional Include Directories -> C:\SFML\Release\include
+      Project settings -> Linker -> General -> Additional Library Directories -> C:\SFML\Release\lib
+    Debug build:
+      Project settings -> C/C++ -> General -> Additional Include Directories -> C:\SFML\Debug\include
+      Project settings -> Linker -> General -> Additional Library Directories -> C:\SFML\Debug\lib
+2.  Make sure to add the SFML libraries to your project settings:
+    Release build:
+      Project settings -> Linker -> Input -> Additional Dependencies -> 
+      FLAC.lib freetype.lib harfbuzz.lib libssh2.lib mbedcrypto.lib mbedtls.lib mbedx509.lib ogg.lib sfml-audio-s.lib sfml-graphics-s.lib sfml-main.lib sfml-network-s.lib sfml-system-s.lib sfml-window-s.lib vorbis.lib vorbisenc.lib vorbisfile.lib opengl32.lib winmm.lib gdi32.lib
+    Debug build:
+      Project settings -> Linker -> Input -> Additional Dependencies -> 
+      FLACd.lib freetyped.lib harfbuzzd.lib libssh2.lib mbedcryptod.lib mbedtlsd.lib mbedx509d.lib oggd.lib sfml-audio-s-d.lib sfml-graphics-s-d.lib sfml-main-d.lib sfml-network-s-d.lib sfml-system-s-d.lib sfml-window-s-d.lib vorbisd.lib vorbisencd.lib vorbisfiled.lib opengl32.lib winmm.lib gdi32.lib
+3.  Make sure to add the SFML_STATIC preprocessor definition to your   
+      Project settings -> C/C++ -> Preprocessor -> Preprocessor Definitions -> SFML_STATIC
 
 Linux build steps
 
@@ -48,121 +67,45 @@ sudo apt install make
 sudo apt install unzip
 
 5. Build SFML:
-5a. Download the SFML zip file from github
-wget https://github.com/SFML/SFML/archive/refs/tags/3.1.0.zip
-5b. Unzip the file
-unzip 3.1.0.zip
-5c. navigate to the unzipped folder
-cd SFML-3.1.0
-5d. Create a build folder and navigate to it
-mkdir build
-    cd build
-6.  Run cmake
+5a. make sure git is installed
+sudo apt install git
+5b. Check cmake version
     For SFML 3.1.0 you need to upgrade cmake to version 4.4.3, because the minimum required version
-    sudo apt remove cmake
-    (met "snap info cmak" kun je de versie van cmake zien die beschikbaar is via snap en 1562 is de versie die nodig is voor SFML 3.1.0)
-    sudo snap install cmake --classic --revision=1562
+    check version of cmake with "
+cmake --version
+    if the version is lower than 4.4.3, you need to upgrade cmake to version 4.4.3, because the minimum required version
+    check welke cmake versions beschikbaar zijn
+snap info cmake
+    verwijder de huidige cmake versie en installeer de nieuwe versie (1562 is de versie die nodig is voor SFML 3.1.0)
+sudo apt remove cmake
+sudo snap install cmake --classic --revision=1562
+5c install the required dependencies for SFML
+sudo apt install \
+    libx11-dev \
+    libxrandr-dev \
+    libxcursor-dev \
+    libxi-dev \
+    libudev-dev \
+    libfreetype6-dev \
+    libflac-dev \
+    libogg-dev \
+    libvorbis-dev \
+    libgl1-mesa-dev \
+    libmbedtls-dev \
+    libssh2-1-dev \
+    libharfbuzz-dev
+5d. Download the SFML zip file from github
+wget https://github.com/SFML/SFML/archive/refs/tags/3.1.0.zip
+5e. Unzip the file
+unzip 3.1.0.zip
+5f. navigate to the unzipped folder
+cd SFML-3.1.0
+5g. Create a build folder and navigate to it
+mkdir build
+cd build
+5h. Run cmake
     cmake ..
-7.  Build debug version of SFML
-    cmake --build . --config Debug
-8.  Install debug version of SFML C:\SFML
-    cmake --install . --config Debug --prefix C:\SFML\Debug
-9.  Build Release version of SFML
-    cmake --build . --config Release
-10. Install Release version of SFML in C:\SFML
-    cmake --install . --config Release --prefix C:\SFML\Release
-
-
-
-Linux build steps for myApp
-
-1. Open terminal
-
-2. Install gcc and g++ compilers
-sudo apt install gcc
-sudo apt install g++
-
-3. Install cmake and make
-sudo apt install cmake
-sudo apt install make
-
-4. Install unzip
-sudo apt install unzip
-
-5. Download the zip file from github
-wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
-
-6. Unzip the file
-unzip main.zip
-
-7. navigate to the unzipped folder
-cd ESE2.1-CPP-main/Workshop\ 7/Workshop/tcpserver/
-
-8. Create a build folder and navigate to it
-mkdir build
-cd build
-
-9. Make sure g++ is used as C++ compiler
-   (note: for c files use the gcc compiler must be used)
-export CXX=/usr/bin/g++
-
-11. Run cmake
-cmake ..
-
-12. Run make
-make
-
-13. Run the program
-./tcpserver
-
-
-8.  
-
-mkdir build
-cd build
-cmake --build . --config Debug
-
-cmake --install . --config Release --prefix ..\..\SFML
-
-
-
-FLAC.lib
-freetype.lib
-harfbuzz.lib
-libssh2.lib
-mbedcrypto.lib
-mbedtls.lib
-mbedx509.lib
-ogg.lib
-sfml-audio-s.lib
-sfml-graphics-s.lib
-sfml-main.lib
-sfml-network-s.lib
-sfml-system-s.lib
-sfml-window-s.lib
-vorbis.lib
-vorbisenc.lib
-vorbisfile.lib
-              17 File(s)     50.308.900 bytes
-              
-              
-FLACd.lib
-freetyped.lib
-harfbuzzd.lib
-libssh2.lib
-mbedcryptod.lib
-mbedtlsd.lib
-mbedx509d.lib
-oggd.lib
-sfml-audio-s-d.lib
-sfml-graphics-s-d.lib
-sfml-main-d.lib
-sfml-network-s-d.lib
-sfml-system-s-d.lib
-sfml-window-s-d.lib
-vorbisd.lib
-vorbisencd.lib
-vorbisfiled.lib
-608 bytes
-
-
+7.  Build SFML
+cmake --build .
+8.  Install SFML
+sudo cmake --install . --prefix=/usr/local

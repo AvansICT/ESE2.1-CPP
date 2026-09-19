@@ -1,5 +1,4 @@
 #include <iostream>
-#include <print>    // C++23
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <cmath>
@@ -237,7 +236,7 @@ int main(
     [[maybe_unused]] int argc,
     [[maybe_unused]] char* argv[])
 {
-    std::print("Chomper ({})\n", __FILE__);
+    std::cout << "Chomper (" << __FILE__ << ")\n";
     std::cout << __DATE__ << " " << __TIME__ << std::endl;
 
     LogTargetArchitecture();
