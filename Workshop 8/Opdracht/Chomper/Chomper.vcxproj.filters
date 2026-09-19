@@ -7,14 +7,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Lib">
-      <UniqueIdentifier>{3e1afff6-84bf-4f1a-8824-5066c2a47ac1}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\Lib\log.hpp">
       <Filter>Lib</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{ec8d8f31-2cfd-4060-8555-5248e453c70e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
