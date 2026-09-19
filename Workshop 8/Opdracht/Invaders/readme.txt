@@ -1,5 +1,7 @@
 Linux build steps
 
+!!! First build and install SFML refer to the readme.txt in the main Opdracht directory for instructions !!!
+
 1. Open terminal
 
 2. Install gcc and g++ compilers

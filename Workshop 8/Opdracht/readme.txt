@@ -32,7 +32,7 @@ Windows build steps
 
 Ready for usage with Visual Studio!
 
-When starting a new project, make sure to add the include and lib directories of SFML to your project settings.
+!!! When starting a new project, make sure to add the include and lib directories of SFML to your project settings. !!!
 
 1.  Make sure to add the include and lib directories of SFML to your project settings.
     Release build:
@@ -79,6 +79,9 @@ snap info cmake
     verwijder de huidige cmake versie en installeer de nieuwe versie (1562 is de versie die nodig is voor SFML 3.1.0)
 sudo apt remove cmake
 sudo snap install cmake --classic --revision=1562
+Extra step for WSL (Windows Subsystem for Linux) add symbolic link to cmake in /usr/bin
+sudo ln -sf /snap/cmake/current/bin/cmake /usr/bin/cmake
+
 5c install the required dependencies for SFML
 sudo apt install \
     libx11-dev \
@@ -109,3 +112,6 @@ cd build
 cmake --build .
 8.  Install SFML
 sudo cmake --install . --prefix=/usr/local
+
+Extra step for WSL install mesa-utils
+sudo apt install mesa-utils
