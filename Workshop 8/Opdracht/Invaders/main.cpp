@@ -1,9 +1,15 @@
 #include <iostream>
-#include <windows.h>
 #include <algorithm>
 #include <cmath>
 #include <cstdint>
 #include <vector>
+#include <thread>
+#include <chrono>
+
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 #include <SFML/Graphics.hpp>
 #include "log.hpp"
 
@@ -37,23 +43,45 @@ class Sound
 {
 public:
 
+    static void beep(unsigned int frequency,
+        unsigned int duration)
+    {
+#ifdef _WIN32
+
+        // Windows
+        Beep(frequency, duration);
+
+#else
+
+        // Linux
+        // Terminal bell
+        std::cout << '\a' << std::flush;
+
+        // Houd ongeveer dezelfde timing aan
+        std::this_thread::sleep_for(
+            std::chrono::milliseconds(duration)
+        );
+
+#endif
+    }
+
     static void shoot()
     {
-        Beep(1000, 35);
+        beep(1000, 35);
     }
 
     static void hit()
     {
-        Beep(700, 40);
-        Beep(1100, 40);
-        Beep(1500, 60);
+        beep(700, 40);
+        beep(1100, 40);
+        beep(1500, 60);
     }
 
     static void gameOver()
     {
-        Beep(500, 100);
-        Beep(350, 100);
-        Beep(200, 200);
+        beep(500, 100);
+        beep(350, 100);
+        beep(200, 200);
     }
 };
 
@@ -933,15 +961,24 @@ private:
 // MAIN
 // ============================================================
 
-int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
+int main([[maybe_unused]] int argc,
+    [[maybe_unused]] char* argv[])
 {
-    std::cout << "Invaders (" << __FILE__ << ")\n";
-    std::cout << __DATE__ << " " << __TIME__ << std::endl;
+    std::cout << "Invaders ("
+        << __FILE__
+        << ")\n";
+
+    std::cout << __DATE__
+        << " "
+        << __TIME__
+        << std::endl;
+
     LogTargetArchitecture();
     LogRunTimeArchitecture();
     LogTargetOperatingSystem();
     LogTargetCompiler();
     LogTargetCxxStandard();
+
     std::cout << "SFML version: "
         << SFML_VERSION_MAJOR << "."
         << SFML_VERSION_MINOR << "."
