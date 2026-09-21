@@ -341,7 +341,7 @@ public:
 
         shape.setPosition({
             500.f,
-            680.f
+            650.f
             });
 
         // --------------------------------------------
@@ -494,7 +494,7 @@ public:
 
     Game()
         : window(
-            sf::VideoMode({ 1000, 700 }),
+            sf::VideoMode({ 1000, 750 }),
             "Invaders"
         ),
         enemyDirection(1.f),
