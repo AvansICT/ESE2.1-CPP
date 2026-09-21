@@ -1,4 +1,4 @@
-make_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.22)
 
 project(myApp LANGUAGES CXX)
 
@@ -8,10 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Allegro
-set(Allegro5_DIR "/usr/local/lib/cmake/Allegro5")
+set(Allegro_DIR "/usr/local/lib/cmake/allegro")
 
 # Find Allegro
-find_package(Allegro5 REQUIRED)
+find_package(Allegro REQUIRED)
 
 # Add executable
 add_executable(Opdracht
@@ -26,6 +26,6 @@ target_include_directories(Opdracht PRIVATE
 
 # Link Allegro
 target_link_libraries(Opdracht PRIVATE
-    Allegro::Allegro
-    Allegro::Primitives
+    Allegro::allegro
+    Allegro::allegro_primitives
 )

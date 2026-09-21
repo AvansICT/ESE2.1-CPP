@@ -23,6 +23,7 @@ Windows build steps
     mkdir build
     cd build
 6.  Run cmake
+    cmake -S .. -B . -DSHARED=OFF -DWANT_D3D=OFF -DWANT_DSOUND=OFF
     cmake -S .. -B . -G "Visual Studio 18 2026" -A x64 -DSHARED=OFF -DWANT_D3D=OFF -DWANT_DSOUND=OFF -DCMAKE_CONFIGURATION_TYPES="Debug;Release;RelWithDebInfo"
 7.  Build debug version of Allegro
     cmake --build . --config Debug
@@ -39,9 +40,7 @@ Windows build steps
 Build Allegro project for a demo!
 
 Linux build steps
-
-!!! First build and install SFML refer to the readme.txt in the main Opdracht directory for instructions !!!
-
+Note this is tested after FSML build steps, might be steps needed from FMSL?
 1. Open terminal
 
 2. Install gcc and g++ compilers
@@ -55,28 +54,36 @@ sudo apt install make
 4. Install unzip
 sudo apt install unzip
 
-5. Download the zip file from github
+5. Build Allegro
+5a Download the Allegro zip file from github
+    wget https://github.com/liballeg/allegro5/archive/refs/tags/5.2.11.3.zip
+5e. Unzip the file
+    unzip 5.2.11.3.zip
+5f. navigate to the unzipped folder
+    cd allegro5-5.2.11.3
+5g. Create a build folder and navigate to it
+    mkdir build
+cd build
+5h. Run cmake
+    cmake -S .. -B . -DSHARED=OFF
+5i. Build Allegro
+    cmake --build . -j$(nproc)
+5j. Install Allegro
+    sudo cmake --install . --prefix=/usr/local
+
+6. Build Allegro project for a demo!
+6a. Download the zip file from github
 wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
-
-6. Unzip the file
+6b. Unzip the file
 unzip main.zip
-
-7. navigate to the unzipped folder
-cd ESE2.1-CPP-main/Workshop\ 8/Opdracht/Opdracht/
-
-8. Create a build folder and navigate to it
+6c. navigate to the unzipped folder
+cd ESE2.1-CPP-main/Workshop\ 8/Opdracht/Allegro/
+6d. Create a build folder and navigate to it
 mkdir build
 cd build
-
-9. Make sure g++ is used as C++ compiler
-   (note: for c files use the gcc compiler must be used)
-export CXX=/usr/bin/g++
-
-11. Run cmake
+6e. Run cmake
 cmake ..
-
-12. Run make
+6f. Run make
 make
-
-13. Run the program
+6e. Run the program
 ./Opdracht
