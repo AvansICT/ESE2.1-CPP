@@ -494,7 +494,7 @@ public:
 
     Game()
         : window(
-            sf::VideoMode({ 1000, 750 }),
+            sf::VideoMode({ 1000, 700 }),
             "Invaders"
         ),
         enemyDirection(1.f),
