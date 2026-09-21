@@ -508,21 +508,21 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
             // -------------------------------------------------
             // Pride rainbow
             // -------------------------------------------------
-
+            // From https://gilbertbaker.com/rainbow-flag-color-meanings/ 
             constexpr int PRIDE_NR_COLORS = 8;
             constexpr int PRIDE_COLOR_HEIGHT = 10;
 
             const ALLEGRO_COLOR pride[
                 PRIDE_NR_COLORS
             ] = {
-                al_map_rgb(223, 25, 149),
-                al_map_rgb(228, 0, 43),
-                al_map_rgb(254, 80, 0),
-                al_map_rgb(255, 255, 0),
-                al_map_rgb(0, 132, 61),
-                al_map_rgb(0, 154, 166),
-                al_map_rgb(0, 61, 165),
-                al_map_rgb(166, 52, 178)
+                al_map_rgb(223, 25, 149),   // Hot Pink      Sex
+                al_map_rgb(228, 0, 43),     // Red          / Life
+                al_map_rgb(254, 80, 0),     // Orange       / Healing
+                al_map_rgb(255, 255, 0),    // Yellow       / Sunlight
+                al_map_rgb(0, 132, 61),     // Green        / Nature
+                al_map_rgb(0, 154, 166),    // Turquoise    / Magic & Art
+                al_map_rgb(0, 61, 165),     // Indigo       / Serenity
+                al_map_rgb(166, 52, 178)    // Violet       / Spirit
             };
 
             for (int i = 0; i < PRIDE_NR_COLORS; ++i)

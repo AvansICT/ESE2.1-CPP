@@ -1,7 +1,12 @@
 Opdracht hello universebuild with allegro5-5.2.11.3 https://github.com/liballeg/allegro5/tags
 
 Allegro is ook een open-source en cross-platform C++-bibliotheek 
-waarmee je eenvoudig grafische applicaties en games kunt maken. 
+waarmee je eenvoudig grafische applicaties en games kunt maken.
+
+Ga eerst aan de slag met SFML, vervolgens kun je hiermee aan de slag.
+Allegro is een alternatief voor SFML, en heeft een andere API en andere functies.
+
+De hello universe opdracht is ook beschikbaar in Allegro, en kan worden gebouwd met de Allegro.
 
 Allegro information
 https://www.allegro.cc/
@@ -42,18 +47,14 @@ Build Allegro project for a demo!
 Linux build steps
 Note this is tested after FSML build steps, might be steps needed from FMSL?
 1. Open terminal
-
 2. Install gcc and g++ compilers
-sudo apt install gcc
-sudo apt install g++
-
+    sudo apt install gcc
+    sudo apt install g++
 3. Install cmake and make
-sudo apt install cmake
-sudo apt install make
-
+    sudo apt install cmake
+    sudo apt install make
 4. Install unzip
 sudo apt install unzip
-
 5. Build Allegro
 5a Download the Allegro zip file from github
     wget https://github.com/liballeg/allegro5/archive/refs/tags/5.2.11.3.zip
@@ -63,14 +64,13 @@ sudo apt install unzip
     cd allegro5-5.2.11.3
 5g. Create a build folder and navigate to it
     mkdir build
-cd build
+    cd build
 5h. Run cmake
     cmake -S .. -B . -DSHARED=OFF
 5i. Build Allegro
     cmake --build . -j$(nproc)
 5j. Install Allegro
     sudo cmake --install . --prefix=/usr/local
-
 6. Build Allegro project for a demo!
 6a. Download the zip file from github
 wget https://github.com/AvansICT/ESE2.1-CPP/archive/refs/heads/main.zip
@@ -87,3 +87,5 @@ cmake ..
 make
 6e. Run the program
 ./Opdracht
+
+Veel plezier met Allgro en de hello universe demo!
