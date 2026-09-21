@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.10.12210.168 stable
+VisualStudioVersion = 18.10.12210.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,6 +15,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pang", "Pang\Pang.vcxproj", "{E00053C6-DD24-4CF6-9E7D-DAF7206AA49F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chomper", "Chomper\Chomper.vcxproj", "{9859DDA2-050E-4B44-8D12-5172D07CE814}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Allegro", "Allegro\allegro.vcxproj", "{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,14 @@ Global
 		{9859DDA2-050E-4B44-8D12-5172D07CE814}.Release|x64.Build.0 = Release|x64
 		{9859DDA2-050E-4B44-8D12-5172D07CE814}.Release|x86.ActiveCfg = Release|Win32
 		{9859DDA2-050E-4B44-8D12-5172D07CE814}.Release|x86.Build.0 = Release|Win32
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Debug|x64.ActiveCfg = Debug|x64
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Debug|x64.Build.0 = Debug|x64
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Debug|x86.ActiveCfg = Debug|Win32
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Debug|x86.Build.0 = Debug|Win32
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Release|x64.ActiveCfg = Release|x64
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Release|x64.Build.0 = Release|x64
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Release|x86.ActiveCfg = Release|Win32
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +75,7 @@ Global
 		{F1900330-1E08-4897-A634-4F51F790DD56} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 		{E00053C6-DD24-4CF6-9E7D-DAF7206AA49F} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 		{9859DDA2-050E-4B44-8D12-5172D07CE814} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+		{10901A12-56CD-4980-A8E9-DEB7C0DF86C6} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42D4A082-3555-4922-B4E4-88AA049EE8A4}
