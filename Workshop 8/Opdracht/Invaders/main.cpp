@@ -852,8 +852,6 @@ private:
 
         drawStars();
 
-        drawRainbow();
-
         player.draw(window);
 
         for (const auto& bullet : bullets)
@@ -925,36 +923,7 @@ private:
         }
     }
 
-    // ========================================================
-    // Rainbow flag
-    // ========================================================
 
-    void drawRainbow()
-    {
-        const float stripeHeight = 8.f;
-
-        for (int i = 0; i < 6; ++i)
-        {
-            sf::RectangleShape stripe({
-                1000.f,
-                stripeHeight
-                });
-
-            stripe.setPosition({
-                0.f,
-                10.f +
-                    i * stripeHeight
-                });
-
-            stripe.setFillColor(
-                Rainbow::color(
-                    static_cast<float>(i)
-                )
-            );
-
-            window.draw(stripe);
-        }
-    }
 };
 
 // ============================================================
