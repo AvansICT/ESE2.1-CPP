@@ -6,6 +6,10 @@
 #include <vector>
 #include "log.hpp"
 
+#define VIDEO_MODE_WIDTH 1000
+#define VIDEO_MODE_HEIGHT 700
+#define FRAME_RATE_LIMIT 60
+
 struct Star
 {
     sf::CircleShape shape;
@@ -28,11 +32,11 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
         << SFML_VERSION_PATCH << '\n';
 
     sf::RenderWindow window(
-        sf::VideoMode({ 1000, 700 }),
+        sf::VideoMode({ VIDEO_MODE_WIDTH, VIDEO_MODE_HEIGHT }),
         "SFML - Rainbow Universe"
     );
 
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(FRAME_RATE_LIMIT);
 
     // ---------------------------------------------------------
     // Planet
@@ -60,8 +64,8 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
         star.shape = sf::CircleShape(size);
 
         star.shape.setPosition({
-            static_cast<float>(std::rand() % 1000),
-            static_cast<float>(std::rand() % 700)
+            static_cast<float>(std::rand() % VIDEO_MODE_WIDTH),
+            static_cast<float>(std::rand() % VIDEO_MODE_HEIGHT)
             });
 
         star.speed =
@@ -102,7 +106,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 
             position.y += star.speed * dt;
 
-            if (position.y > 700.f)
+            if (position.y > VIDEO_MODE_HEIGHT)
                 position.y = 0.f;
 
             star.shape.setPosition(position);
@@ -162,27 +166,33 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
         // -----------------------------------------------------
         // Pride rainbow
         // -----------------------------------------------------
+        // From https://gilbertbaker.com/rainbow-flag-color-meanings/ 
+        constexpr int PRIDE_NR_COLORS = 8;
+        constexpr int PRIDE_COLOR_HEIGHT = 10;
 
-        const sf::Color pride[] = {
-            sf::Color(255, 0, 0),
-            sf::Color(255, 165, 0),
-            sf::Color(255, 255, 0),
-            sf::Color(0, 200, 80),
-            sf::Color(0, 150, 255),
-            sf::Color(140, 50, 255)
+        const sf::Color pride[PRIDE_NR_COLORS] = {
+            sf::Color(223, 25 , 149),   // Hot Pink / Sex
+            sf::Color(228, 0  , 43 ),   // Red      / Life
+            sf::Color(254, 80 , 0  ),   // Orange   / Healing
+            sf::Color(255, 255, 0  ),   // Yellow   / Sunlight
+            sf::Color(0  , 132, 61 ),   // Green    / Nature
+            sf::Color(0  , 154, 166),   //Turquoise / Magic & Art
+            sf::Color(0  , 61 , 165),   // Indigo   / Serenity
+            sf::Color(166, 52 , 178)    // Violet   / Spirit
         };
-
-        for (int i = 0; i < 6; ++i)
+        
+        for (int i = 0; i < PRIDE_NR_COLORS; ++i)
         {
             sf::RectangleShape stripe({
-                1000.f,
-                10.f
+                VIDEO_MODE_WIDTH,
+                PRIDE_COLOR_HEIGHT
                 });
 
             stripe.setPosition({
                 0.f,
-                640.f + i * 10.f
-                });
+                static_cast<float>(VIDEO_MODE_HEIGHT - (PRIDE_NR_COLORS * PRIDE_COLOR_HEIGHT))
+                    + i * PRIDE_COLOR_HEIGHT
+            });
 
             stripe.setFillColor(pride[i]);
 
