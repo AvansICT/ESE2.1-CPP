@@ -45,7 +45,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 
     sf::RenderWindow window(
         sf::VideoMode({ VIDEO_MODE_WIDTH, VIDEO_MODE_HEIGHT }),
-        "SFML - Rainbow Universe"
+        "SFML - Hello Universe"
     );
 
     window.setFramerateLimit(FRAME_RATE_LIMIT);

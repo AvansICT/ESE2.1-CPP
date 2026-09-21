@@ -135,7 +135,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 
     sf::RenderWindow window(
         sf::VideoMode({ 1000, 700 }),
-        "Rainbow Pong 🏳️‍🌈"
+        "Pang"
     );
 
     window.setFramerateLimit(60);

@@ -495,7 +495,7 @@ public:
     Game()
         : window(
             sf::VideoMode({ 1000, 750 }),
-            "Rainbow Space Invaders"
+            "Invaders"
         ),
         enemyDirection(1.f),
         enemySpeed(80.f),
