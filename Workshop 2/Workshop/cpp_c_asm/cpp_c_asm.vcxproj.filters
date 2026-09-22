@@ -32,4 +32,8 @@
       <UniqueIdentifier>{9066ef5b-9d3e-4478-923b-33e9bd5695c1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="README.md" />
+  </ItemGroup>
 </Project>

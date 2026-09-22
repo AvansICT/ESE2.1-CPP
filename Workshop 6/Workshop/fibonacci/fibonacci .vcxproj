@@ -147,7 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
-    <Text Include="readme.txt" />
+    <Text Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Lib\chronotimer.hpp" />

@@ -25,6 +25,10 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Lib\log.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="README.md" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{DCB3F8DB-FD53-4CD5-94D6-CDC1D00AE281}</ProjectGuid>

@@ -15,4 +15,8 @@
       <UniqueIdentifier>{ec8d8f31-2cfd-4060-8555-5248e453c70e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="README.md" />
+  </ItemGroup>
 </Project>

@@ -16,4 +16,8 @@
       <Filter>Lib</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="README.md" />
+  </ItemGroup>
 </Project>
