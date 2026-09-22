@@ -65,7 +65,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="readme.txt" />
+    <Text Include="README.md" />
     <Text Include="CMakeLists.txt" />
   </ItemGroup>
 </Project>
