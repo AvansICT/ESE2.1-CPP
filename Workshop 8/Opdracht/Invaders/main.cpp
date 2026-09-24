@@ -514,7 +514,7 @@ public:
         const auto logoPath =
             std::filesystem::current_path() / "Avans_Logo-RGB.png";
         sf::Texture logoTexture;
-        bool logoLoaded = logoTexture.loadFromFile(logoPath.string());
+        logoLoaded = logoTexture.loadFromFile(logoPath.string());
         if (!logoLoaded)
         {
             std::cerr << "Asset kon niet worden geladen: "
