@@ -513,7 +513,6 @@ public:
         // Avans Logo
         const auto logoPath =
             std::filesystem::current_path() / "Avans_Logo-RGB.png";
-        sf::Texture logoTexture;
         logoLoaded = logoTexture.loadFromFile(logoPath.string());
         if (!logoLoaded)
         {
