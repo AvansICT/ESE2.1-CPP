@@ -119,6 +119,12 @@
       <AdditionalLibraryDirectories>C:\Allegro\Debug\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>allegro-static.lib;allegro_color-static.lib;allegro_dialog-static.lib;allegro_font-static.lib;allegro_image-static.lib;allegro_main-static.lib;allegro_memfile-static.lib;allegro_primitives-static.lib;opengl32.lib;winmm.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "..\assets" "$(ProjectDir)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets to working directory</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -138,6 +144,12 @@
       <AdditionalLibraryDirectories>C:\Allegro\Release\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>allegro-static.lib;allegro_color-static.lib;allegro_dialog-static.lib;allegro_font-static.lib;allegro_image-static.lib;allegro_main-static.lib;allegro_memfile-static.lib;allegro_primitives-static.lib;opengl32.lib;winmm.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "..\assets" "$(ProjectDir)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets to working directory</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Lib\log.cpp" />
@@ -149,6 +161,9 @@
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
     <Text Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\assets\Avans_Logo-RGB.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

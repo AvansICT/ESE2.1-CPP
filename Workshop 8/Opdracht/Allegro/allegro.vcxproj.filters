@@ -10,6 +10,9 @@
     <Filter Include="Lib">
       <UniqueIdentifier>{3e1afff6-84bf-4f1a-8824-5066c2a47ac1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{e575b0b3-3d3f-4279-aed2-2782058256c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Lib\log.hpp">
@@ -19,5 +22,10 @@
   <ItemGroup>
     <Text Include="README.md" />
     <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\assets\Avans_Logo-RGB.png">
+      <Filter>assets</Filter>
+    </Image>
   </ItemGroup>
 </Project>

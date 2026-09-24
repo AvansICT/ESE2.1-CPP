@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <iterator>
 #include <cstdint>
-
+#include <filesystem>
 #include <vector>
 #include <deque>
 #include <list>
@@ -17,7 +17,7 @@
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
-
+#include <allegro5/allegro_image.h>
 #include "log.hpp"
 
 #define VIDEO_MODE_WIDTH 1000
@@ -56,6 +56,12 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     if (!al_init())
     {
         std::cerr << "Allegro initialisatie mislukt\n";
+        return 1;
+    }
+
+    if (!al_init_image_addon())
+    {
+        std::cerr << "Allegro image addon initialisatie mislukt\n";
         return 1;
     }
 
@@ -367,6 +373,17 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     bool running = true;
     bool redraw = true;
 
+    // Avans Logo
+    const auto logoPath =
+    std::filesystem::current_path() / "Avans_Logo-RGB.png";
+
+    ALLEGRO_BITMAP* logo = al_load_bitmap(logoPath.string().c_str());
+    if (!logo)
+    {
+        std::cerr << "Asset kon niet worden geladen: "
+            << logoPath << '\n';
+    }
+
     al_start_timer(timer);
 
     // =========================================================
@@ -548,7 +565,10 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
                     pride[i]
                 );
             }
-
+            if (logo)
+            {
+                al_draw_bitmap(logo, 20, 20, 0);
+            }
             al_flip_display();
         }
     }
@@ -556,7 +576,13 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     // =========================================================
     // Opruimen
     // =========================================================
+    if (logo)
+    {
+        al_destroy_bitmap(logo);
+    }
+    al_shutdown_image_addon();
 
+    al_shutdown_image_addon();
     al_destroy_timer(timer);
     al_destroy_event_queue(eventQueue);
     al_destroy_display(display);
