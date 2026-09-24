@@ -28,6 +28,7 @@ target_include_directories(Opdracht PRIVATE
 target_link_libraries(Opdracht PRIVATE
     Allegro::allegro
     Allegro::allegro_primitives
+    Allegro::allegro_image
 )
 
 # Copy assets next to executable after build

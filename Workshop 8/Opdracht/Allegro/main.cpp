@@ -581,8 +581,6 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
         al_destroy_bitmap(logo);
     }
     al_shutdown_image_addon();
-
-    al_shutdown_image_addon();
     al_destroy_timer(timer);
     al_destroy_event_queue(eventQueue);
     al_destroy_display(display);
