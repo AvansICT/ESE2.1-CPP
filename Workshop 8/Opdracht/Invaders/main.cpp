@@ -5,6 +5,7 @@
 #include <vector>
 #include <thread>
 #include <chrono>
+#include <filesystem>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -490,6 +491,8 @@ private:
 
     float totalTime;
 
+    bool logoLoaded;
+    sf::Texture logoTexture;
 public:
 
     Game()
@@ -506,6 +509,17 @@ public:
         window.setFramerateLimit(60);
 
         createEnemies();
+
+        // Avans Logo
+        const auto logoPath =
+            std::filesystem::current_path() / "Avans_Logo-RGB.png";
+        sf::Texture logoTexture;
+        bool logoLoaded = logoTexture.loadFromFile(logoPath.string());
+        if (!logoLoaded)
+        {
+            std::cerr << "Asset kon niet worden geladen: "
+                << logoPath << '\n';
+        }
     }
 
     void run()
@@ -867,6 +881,13 @@ private:
         for (const auto& explosion : explosions)
         {
             explosion.draw(window);
+        }
+
+        if (logoLoaded)
+        {
+            sf::Sprite logo(logoTexture);
+            logo.setPosition({ 20.f, 20.f });
+            window.draw(logo);
         }
 
         window.display();

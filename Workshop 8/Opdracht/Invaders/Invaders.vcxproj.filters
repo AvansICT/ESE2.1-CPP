@@ -15,9 +15,17 @@
     <Filter Include="Lib">
       <UniqueIdentifier>{ec8d8f31-2cfd-4060-8555-5248e453c70e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{cfc79642-8c61-4b24-aa6f-9dd0e6cc5dca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="README.md" />
     <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\assets\Avans_Logo-RGB.png">
+      <Filter>assets</Filter>
+    </Image>
   </ItemGroup>
 </Project>

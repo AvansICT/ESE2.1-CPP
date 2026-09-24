@@ -5,7 +5,7 @@
 #include <ctime>
 #include <algorithm>
 #include <iterator>
-
+#include <filesystem>
 #include <vector>
 #include <deque>
 #include <list>
@@ -299,6 +299,17 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     std::cout << "unordered_map : "
         << speedById.size() << '\n';
 
+    // Avans Logo
+    const auto logoPath =
+        std::filesystem::current_path() / "Avans_Logo-RGB.png";
+    sf::Texture logoTexture;
+    bool logoLoaded = logoTexture.loadFromFile(logoPath.string());
+    if(!logoLoaded)
+    {
+        std::cerr << "Asset kon niet worden geladen: "
+            << logoPath << '\n';
+    }
+
     // =========================================================
     // Clock
     // =========================================================
@@ -429,6 +440,14 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
             stripe.setFillColor(pride[i]);
 
             window.draw(stripe);
+        }
+
+        
+        if(logoLoaded)
+        { 
+            sf::Sprite logo(logoTexture);
+            logo.setPosition({ 20.f, 20.f });
+            window.draw(logo);
         }
 
         window.display();

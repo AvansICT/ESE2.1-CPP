@@ -148,6 +148,17 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     sf::Clock clock;
     float time = 0.f;
 
+    // Avans Logo
+    const auto logoPath =
+        std::filesystem::current_path() / "Avans_Logo-RGB.png";
+    sf::Texture logoTexture;
+    bool logoLoaded = logoTexture.loadFromFile(logoPath.string());
+    if (!logoLoaded)
+    {
+        std::cerr << "Asset kon niet worden geladen: "
+            << logoPath << '\n';
+    }
+
     while (window.isOpen())
     {
         while (const auto event = window.pollEvent())
@@ -204,6 +215,13 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
         left.draw(window, time);
         right.draw(window, time);
         ball.draw(window, time);
+
+        if (logoLoaded)
+        {
+            sf::Sprite logo(logoTexture);
+            logo.setPosition({ 20.f, 20.f });
+            window.draw(logo);
+        }
 
         window.display();
     }

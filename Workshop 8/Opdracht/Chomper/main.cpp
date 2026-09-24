@@ -3,6 +3,7 @@
 #include <vector>
 #include <cmath>
 #include <cstdlib>
+#include <filesystem>
 #include "log.hpp"
 
 class Player
@@ -297,6 +298,17 @@ int main(
     sf::Clock clock;
     float time = 0.f;
 
+    // Avans Logo
+    const auto logoPath =
+        std::filesystem::current_path() / "Avans_Logo-RGB.png";
+    sf::Texture logoTexture;
+    bool logoLoaded = logoTexture.loadFromFile(logoPath.string());
+    if (!logoLoaded)
+    {
+        std::cerr << "Asset kon niet worden geladen: "
+            << logoPath << '\n';
+    }
+
     while (window.isOpen())
     {
         while (const auto event = window.pollEvent())
@@ -330,6 +342,13 @@ int main(
             ghost.draw(window);
 
         player.draw(window, time);
+
+        if (logoLoaded)
+        {
+            sf::Sprite logo(logoTexture);
+            logo.setPosition({ 20.f, 20.f });
+            window.draw(logo);
+        }
 
         window.display();
     }

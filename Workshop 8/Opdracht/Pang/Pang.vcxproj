@@ -128,6 +128,12 @@
 ;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\SFML\Debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "..\assets" "$(ProjectDir)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets to working directory</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -150,6 +156,12 @@
 ;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\SFML\Release\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "..\assets" "$(ProjectDir)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets to working directory</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Lib\log.cpp" />
@@ -161,6 +173,9 @@
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
     <Text Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\assets\Avans_Logo-RGB.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
