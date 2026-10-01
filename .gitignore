@@ -1,6 +1,8 @@
 ## Ignore Visual Studio temporary files, build results
 *.ipch
 *.user
+## ignore LION files
+.idea
 
 ## voorbeelden
 /voorbeelden/.vs
