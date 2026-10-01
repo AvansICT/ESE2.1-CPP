@@ -2,8 +2,8 @@
 //
 
 #include <iostream>
-// GCC versie check voor C++23 std::print ondersteuning
-#if defined(__GNUC__) && (__GNUC__ < 13)
+// C++ versie check voor C++23 std::print ondersteuning
+#if (__cplusplus < 202302L)
 #define NO_STD_PRINT
 #endif
 
@@ -31,7 +31,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     std::cout << __DATE__ << " " << __TIME__ << std::endl; // log date and time of compilation, not runtime
 
 #ifdef NO_STD_PRINT
-    std::cout << "std::print not supported on this GCC version\n";
+    std::cout << "std::print not supported on this C++ version\n";
 #else
     std::print("Hello, World! C++23\n");    // C++23 feature
 #endif

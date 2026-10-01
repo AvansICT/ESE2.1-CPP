@@ -1,5 +1,12 @@
 #include <iostream>
-#include <print>    //C++23
+// C++ versie check voor C++23 std::print ondersteuning
+#if (__cplusplus < 202302L)
+#define NO_STD_PRINT
+#endif
+
+#ifndef NO_STD_PRINT
+#include <print>
+#endif
 #include "log.hpp"
 
 using namespace std;
@@ -28,7 +35,11 @@ public:
 // TODO: initialiseer static variabele
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[]) {
+#ifdef NO_STD_PRINT
+    std::cout << "std::print not supported on this C++ version\n";
+#else
     std::print("Hello, Opdracht 4\n");    // C++23 feature
+#endif
     Student s1(101);
     Student s2(102);
 
