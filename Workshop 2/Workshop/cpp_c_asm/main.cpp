@@ -18,13 +18,14 @@ extern "C" int addWithAsmX86(int a, int b);
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
-	std::cout << "Hello CPP C ASM" << std::endl;
+    std::cout << "Hello CPP C ASM" << std::endl;
     LogTargetArchitecture();
     LogRunTimeArchitecture();
     LogTargetOperatingSystem();
     LogTargetCompiler();
     LogTargetCxxStandard();
     LogTargetCStandard();
+    LOG_DEBUG("Program started");
     std::cout << __DATE__ << " " << __TIME__ << std::endl << std::endl; // log date and time of compilation, not runtime
 
     // demo of binary literals

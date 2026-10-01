@@ -47,7 +47,7 @@ void LogTargetOperatingSystem(void)
 
 void LogTargetArchitecture(void)
 {
-	std::cout << "Target architecture: ";
+	std::cout << "Target Architecture: ";
 #if defined(_M_X64)
 	std::cout << "x64";
 #elif defined(_M_IX86)
@@ -67,7 +67,7 @@ void LogRunTimeArchitecture(void)
 	// sizeof(void*) geeft de grootte van een pointer (adres in geheugen) in bytes
 	// 32bit: 4 bytes
 	// 64bit: 8 bytes
-	std::cout << "Runtime architecture: ";
+	std::cout << "Runtime Architecture: ";
 	if (sizeof(void*) == 8)
 	{
 		std::cout << "64-bit";
@@ -94,7 +94,7 @@ void LogRunTimeArchitecture(void)
 
 void LogTargetCompiler(void)
 {
-	std::cout << "Target compiler: ";
+	std::cout << "Target Compiler: ";
 #if defined(__clang__)
 	std::cout << "Clang version: " << __clang_version__;
 #elif defined(__GNUC__) || defined(__GNUG__)

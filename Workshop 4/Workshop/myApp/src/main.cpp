@@ -15,7 +15,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 	LogTargetOperatingSystem();
 	LogTargetCompiler();
 	LogTargetCxxStandard();
-	LOG_DEBUG
+	LOG_DEBUG("Program started");
 	// Some fun with random numbers
 	std::srand(static_cast<unsigned>(std::time(nullptr))); // init random
 

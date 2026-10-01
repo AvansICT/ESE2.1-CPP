@@ -38,7 +38,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
     LogTargetCxxStandard();
     LogTargetOperatingSystem();
     LogTargetCompiler();
-    LOG_DEBUG;
+    LOG_DEBUG("Program started");
 
     int sum = globalAdd(40, 2);  // global function
     std::cout << "globalAdd: " << sum << std::endl;

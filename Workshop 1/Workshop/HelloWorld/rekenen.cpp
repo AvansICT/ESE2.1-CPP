@@ -5,7 +5,6 @@
 namespace MijnRekenNamespace {
 
     int NameSpaceAdd(int x, int y) {
-//        LOG_DEBUG;
         return x + y;
     }
 
@@ -21,7 +20,6 @@ namespace MijnRekenNamespace {
 
     int MijnRekenKlasse::add(int x, int y)
     {
-//        LOG_DEBUG;
         return x + y;
     }
 }
