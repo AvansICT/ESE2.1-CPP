@@ -1,24 +1,22 @@
 # Allegro
 Opdracht hello universebuild with allegro5-5.2.11.3 https://github.com/liballeg/allegro5/tags
 
-Allegro is ook een open-source en cross-platform C++-bibliotheek 
-waarmee je eenvoudig grafische applicaties en games kunt maken.
-
-Ga eerst aan de slag met SFML, vervolgens kun je hiermee aan de slag.
+Allegro is een open-source en cross-platform C++-bibliotheek waarmee je eenvoudig grafische applicaties en games kunt maken.
 Allegro is een alternatief voor SFML, en heeft een andere API en andere functies.
 
-De hello universe opdracht is ook beschikbaar in Allegro, en kan worden gebouwd met de Allegro.
+De Hello Universe-opdracht is beschikbaar voor zowel SFML als Allegro en kan met beide frameworks worden gebouwd.
+De overige opdrachten zijn alleen beschikbaar in SFML. Wil je met Allegro werken, dan kun je deze opdrachten zelf naar Allegro porten. Dat kan een leuke extra oefening zijn om de verschillen en overeenkomsten tussen beide frameworks beter te leren kennen.
 
 Allegro information
 https://www.allegro.cc/
 https://en.wikipedia.org/wiki/Allegro_(game_engine)
 
 # Windows build steps
-### 1.  Install cmake (tested with 4.4.3)
+### 1.  Install cmake (tested with version 4.4.3)
 ```bash
     https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-windows-x86_64.msi
 ```
-### 2.  Download the SFML zip file from github
+### 2.  Download the Allegro zip file from github 
 ```bash
     https://github.com/liballeg/allegro5/archive/refs/tags/5.2.11.3.zip
 ```

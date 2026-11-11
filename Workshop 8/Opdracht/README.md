@@ -7,9 +7,10 @@ https://www.sfml-dev.org/
 https://en.wikipedia.org/wiki/Simple_and_Fast_Multimedia_Library 
 
 # Windows build steps
-### 1.  Install cmake (tested with 4.4.3)
+### 1.  Install cmake (tested with version 4.4.3)
     https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-windows-x86_64.msi
-### 2.  Download the SFML zip file from github
+### 2.  Download the SFML zip file from github (tested with version 3.1.0)
+    https://github.com/SFML/SFML/tags
     https://github.com/SFML/SFML/archive/refs/tags/3.1.0.zip
     Extract the archive file to your directory of choice. 
     For this example it was extracted to "C:\SFML-3.1.0"
